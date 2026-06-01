@@ -5,34 +5,74 @@ body {
   font-family: "Degular", sans-serif;
 }
 
-/* TOP BAR */
+/* TOP */
 .top {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
-
-  padding: 40px;
-  font-size: 13px;
+  padding: 30px 40px;
+  font-size: 12px;
   z-index: 10;
-  mix-blend-mode: difference;
-  color: white;
 }
 
-/* HERO FULL SCREEN */
+/* HERO IMAGE */
 .hero {
-  width: 100%;
   height: 100vh;
-  overflow: hidden;
+  width: 100%;
 }
 
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transform: scale(1.02);
+}
+
+/* PROJECT LIST */
+.projects {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* SINGLE PROJECT */
+.project {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+
+  text-decoration: none;
+  color: #001BFF;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid rgba(0,27,255,0.3);
+  padding-bottom: 15px;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER MINIMAL (come siti studio) */
+.project:hover {
+  opacity: 0.5;
+}
+
+/* NUMERO */
+.project span {
+  width: 40px;
+  opacity: 0.5;
+}
+
+/* TITOLI */
+.project div {
+  font-family: "New Spirit", serif;
+  font-size: 18px;
+}
+
+/* SOTTOTITOLO */
+.project small {
+  margin-left: auto;
+  opacity: 0.6;
 }
