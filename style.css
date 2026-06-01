@@ -1,6 +1,6 @@
 
 /* =========================
-   FONTS (ATTENZIONE AI NOMI FILE REALI)
+   FONTS
 ========================= */
 
 @font-face {
@@ -32,7 +32,7 @@ body {
   padding: 0;
   background: #FFEAF1;
   color: #FF4FB8;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* =========================
@@ -50,67 +50,53 @@ body {
 }
 
 /* =========================
-   HEADER NAME (HC GLEAM)
-========================= */
-
-.top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 40px;
-  z-index: 10;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-  line-height: 0.85;
-  font-family: "HC Gleam"; /* ✔ FIX REALE */
-}
-
-.big {
-  font-size: 220px;
-}
-
-/* =========================
-   WORK SECTION
+   WORK (ORA TOP LEFT)
 ========================= */
 
 .work {
   position: absolute;
-  bottom: 60px;
-  right: 40px;
+  top: 40px;
+  left: 40px;
 
   display: flex;
   flex-direction: column;
-
-  gap: 3px; /* 🔥 ancora più stretto */
+  gap: 3px;
 }
 
-/* WORK (BOLD + PIÙ GRANDE) */
 .work-title {
   font-family: "New Spirit Bold";
-  font-size: 22px; /* 🔥 più grande dei progetti */
-  margin-bottom: 4px;
+  font-size: 22px;
+  margin-bottom: 6px;
 }
 
-/* PROGETTI (SEMI BOLD) */
 .project {
   font-family: "New Spirit";
   font-size: 16px;
-
   text-decoration: none;
   color: #FF4FB8;
-
-  line-height: 1.0; /* 🔥 ridotto ancora */
+  line-height: 1.0;
   letter-spacing: 0.4px;
-
   transition: 0.3s;
 }
 
 .project:hover {
-  transform: translateX(-5px);
+  transform: translateX(5px);
   opacity: 0.6;
+}
+
+/* =========================
+   NOME BASSO CENTRATO
+========================= */
+
+.name-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "HC Gleam";
+  font-size: 28px;
+  color: #FF4FB8;
 }
 
 /* =========================
@@ -128,23 +114,6 @@ body {
 
 .project-page img {
   width: 100%;
-  height: auto;
   display: block;
   margin: 0;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .big {
-    font-size: 80px;
-  }
-
-  .work {
-    right: 20px;
-    bottom: 30px;
-  }
 }
