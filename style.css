@@ -1,12 +1,33 @@
 body {
   margin: 0;
   background: #FFEAF1;
-  font-family: "Degular", sans-serif;
   color: #FF4FB8;
   overflow-x: hidden;
 }
 
-/* BACKGROUND HOME */
+/* =======================
+   FONTS (DEVI AVERLI CARICATI)
+======================= */
+
+body {
+  font-family: "Degular", sans-serif;
+}
+
+/* titolo grande */
+.left {
+  font-family: "HC Gleam", serif;
+}
+
+/* menu + progetti */
+.menu,
+.project {
+  font-family: "New Spirit", serif;
+}
+
+/* =======================
+   HOME
+======================= */
+
 .bg {
   position: fixed;
   inset: 0;
@@ -16,27 +37,23 @@ body {
   z-index: 0;
 }
 
-/* HEADER HOME */
 .top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 40px;
 
   display: flex;
   justify-content: space-between;
 
-  padding: 40px;
   z-index: 10;
 }
 
-/* NOME GRANDE */
 .left {
   display: flex;
   flex-direction: column;
-  font-family: "HC Gleam", serif;
   line-height: 0.85;
-  color: #FF4FB8;
 }
 
 .big {
@@ -44,15 +61,11 @@ body {
   font-weight: 400;
 }
 
-/* MENU */
 .menu {
-  font-family: "New Spirit", serif;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #FF4FB8;
 }
 
-/* PROJECT LIST */
 .projects {
   position: absolute;
   bottom: 60px;
@@ -67,9 +80,8 @@ body {
 
 .project {
   font-size: 14px;
-  font-family: "Degular", sans-serif;
-  color: #FF4FB8;
   text-decoration: none;
+  color: #FF4FB8;
   transition: 0.3s;
 }
 
@@ -78,13 +90,11 @@ body {
   opacity: 0.6;
 }
 
-.disabled {
-  opacity: 0.3;
-}
+/* =======================
+   CASE STUDY PAGES
+======================= */
 
-/* ===== CASE STUDY ===== */
-
-body.project-page-body {
+.project-page-body {
   background: #ffffff;
 }
 
@@ -100,7 +110,10 @@ body.project-page-body {
   margin: 0;
 }
 
-/* RESPONSIVE */
+/* =======================
+   RESPONSIVE
+======================= */
+
 @media (max-width: 768px) {
   .big {
     font-size: 80px;
