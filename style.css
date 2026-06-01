@@ -1,6 +1,6 @@
 
 /* =========================
-   FONT
+   FONT (SENZA FALLBACK CONFUSO)
 ========================= */
 
 @font-face {
@@ -50,13 +50,37 @@ body {
 }
 
 /* =========================
-   PROGETTI (ALTO SINISTRA)
+   NAME LEFT (HC GLEAM FORZATO)
+========================= */
+
+.name-left {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  line-height: 0.85;
+
+  font-family: "HC Gleam"; /* 🔥 QUI FORZATO */
+}
+
+.paola {
+  font-size: 120px;
+}
+
+.moraca {
+  font-size: 120px;
+}
+
+/* =========================
+   WORK
 ========================= */
 
 .work {
   position: absolute;
   top: 40px;
-  left: 40px;
+  right: 40px;
 
   display: flex;
   flex-direction: column;
@@ -82,19 +106,4 @@ body {
 .project:hover {
   transform: translateX(5px);
   opacity: 0.6;
-}
-
-/* =========================
-   NOME (RIMESSO)
-========================= */
-
-.name-bottom {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  font-family: "HC Gleam";
-  font-size: 28px;
-  color: #FF4FB8;
 }
