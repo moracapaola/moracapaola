@@ -1,5 +1,5 @@
 /* =========================
-   FONT (CORRETTI CON TUOI NOMI)
+   FONT CORRETTI
 ========================= */
 
 @font-face {
@@ -30,7 +30,7 @@ body {
 }
 
 /* =========================
-   COVER (FIX M BUG)
+   COVER
 ========================= */
 
 .bg {
@@ -40,24 +40,23 @@ body {
   background-size: cover;
   background-position: center;
   z-index: 0;
-  pointer-events: none; /* 🔥 elimina interazioni strane tipo "M" */
+  pointer-events: none;
 }
 
 /* =========================
-   HEADER
+   HEADER NAME
 ========================= */
 
 .top {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   padding: 40px;
   z-index: 10;
 }
 
 .left {
-  font-family: "HC Gleam";
+  font-family: "HC Gleam"; /* ✔ PAOLA MORACA QUI */
   line-height: 0.85;
 }
 
@@ -79,19 +78,18 @@ body {
   gap: 12px;
 }
 
-/* TITLE WORK */
+/* WORK TITLE */
 .work-title {
   font-family: "New Spirit";
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
-/* PROJECT LINKS (PIÙ GRANDI) */
+/* PROJECTS */
 .project {
-  font-family: "New Spirit";
-  font-size: 16px; /* 🔥 aumentato */
-  color: #FF4FB8;
+  font-family: "New Spirit"; /* ✔ QUI FONT GIUSTO */
+  font-size: 16px;
   text-decoration: none;
+  color: #FF4FB8;
   transition: 0.3s;
 }
 
@@ -105,7 +103,7 @@ body {
   margin-top: 20px;
   font-family: "Degular";
   font-size: 12px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* =========================
