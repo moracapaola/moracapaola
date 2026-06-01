@@ -1,5 +1,6 @@
+
 /* =========================
-   FONTS
+   FONTS (ATTENZIONE AI NOMI FILE REALI)
 ========================= */
 
 @font-face {
@@ -48,19 +49,8 @@ body {
   pointer-events: none;
 }
 
-/* COVER NAME (HC GLEAM) */
-.cover-name {
-  position: fixed;
-  top: 40px;
-  right: 40px;
-
-  font-family: "HC Gleam", serif;
-  font-size: 32px;
-  z-index: 5;
-}
-
 /* =========================
-   HEADER NAME LEFT
+   HEADER NAME (HC GLEAM)
 ========================= */
 
 .top {
@@ -75,11 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 0.85;
-}
-
-.left,
-.big {
-  font-family: "HC Gleam", serif;
+  font-family: "HC Gleam"; /* ✔ FIX REALE */
 }
 
 .big {
@@ -87,7 +73,7 @@ body {
 }
 
 /* =========================
-   WORK
+   WORK SECTION
 ========================= */
 
 .work {
@@ -98,24 +84,25 @@ body {
   display: flex;
   flex-direction: column;
 
-  gap: 4px; /* 🔥 ancora più tight */
+  gap: 3px; /* 🔥 ancora più stretto */
 }
 
-/* WORK TITLE (BOLD) */
+/* WORK (BOLD + PIÙ GRANDE) */
 .work-title {
   font-family: "New Spirit Bold";
-  font-size: 20px; /* 🔥 più grande dei progetti */
+  font-size: 22px; /* 🔥 più grande dei progetti */
   margin-bottom: 4px;
 }
 
-/* PROJECT LINKS */
+/* PROGETTI (SEMI BOLD) */
 .project {
   font-family: "New Spirit";
-  font-size: 16px; /* 🔥 più piccolo del WORK */
+  font-size: 16px;
+
   text-decoration: none;
   color: #FF4FB8;
 
-  line-height: 1.05; /* 🔥 ridotto leading */
+  line-height: 1.0; /* 🔥 ridotto ancora */
   letter-spacing: 0.4px;
 
   transition: 0.3s;
@@ -154,12 +141,6 @@ body {
 
   .big {
     font-size: 80px;
-  }
-
-  .cover-name {
-    font-size: 20px;
-    top: 20px;
-    right: 20px;
   }
 
   .work {
