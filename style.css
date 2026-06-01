@@ -1,6 +1,6 @@
 
 /* =========================
-   FONTS
+   FONTS (RIPRISTINO CORRETTO)
 ========================= */
 
 @font-face {
@@ -66,7 +66,7 @@ body {
 }
 
 .project {
-  font-family: "New Spirit";
+  font-family: "New Spirit"; /* ✔ RIPRISTINATO */
   font-size: 16px;
   text-decoration: none;
   color: #FF4FB8;
@@ -79,6 +79,27 @@ body {
 }
 
 /* =========================
+   ABOUT (ALTO DESTRA)
+========================= */
+
+.about-link {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  font-family: "New Spirit";
+  font-size: 16px;
+  text-decoration: none;
+  color: #FF4FB8;
+
+  z-index: 5;
+}
+
+.about-link:hover {
+  opacity: 0.6;
+}
+
+/* =========================
    NAME (BASSO SINISTRA)
 ========================= */
 
@@ -87,7 +108,7 @@ body {
   bottom: 40px;
   left: 40px;
 
-  font-family: "New Spirit Bold"; /* 🔥 più bold come richiesto */
+  font-family: "New Spirit Bold";
   font-size: 48px;
   line-height: 0.9;
   z-index: 5;
