@@ -1,5 +1,6 @@
+
 /* =========================
-   FONT CORRETTI
+   FONTS
 ========================= */
 
 @font-face {
@@ -56,8 +57,14 @@ body {
 }
 
 .left {
-  font-family: "HC Gleam"; /* ✔ PAOLA MORACA QUI */
+  display: flex;
+  flex-direction: column;
   line-height: 0.85;
+}
+
+.left,
+.big {
+  font-family: "HC Gleam", serif;
 }
 
 .big {
@@ -75,34 +82,28 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px; /* 🔥 più stretto */
 }
 
 /* WORK TITLE */
 .work-title {
   font-family: "New Spirit";
   font-size: 16px;
+  margin-bottom: 6px;
 }
 
 /* PROJECTS */
 .project {
-  font-family: "New Spirit"; /* ✔ QUI FONT GIUSTO */
-  font-size: 16px;
+  font-family: "New Spirit";
+  font-size: 18px; /* 🔥 più grande */
   text-decoration: none;
   color: #FF4FB8;
   transition: 0.3s;
+  letter-spacing: 0.5px;
 }
 
 .project:hover {
   transform: translateX(-5px);
-  opacity: 0.6;
-}
-
-/* FONT LIST */
-.fonts {
-  margin-top: 20px;
-  font-family: "Degular";
-  font-size: 12px;
   opacity: 0.6;
 }
 
