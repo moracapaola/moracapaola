@@ -1,6 +1,6 @@
 
 /* =========================
-   FONTS
+   FONT
 ========================= */
 
 @font-face {
@@ -50,7 +50,7 @@ body {
 }
 
 /* =========================
-   WORK (ORA TOP LEFT)
+   PROGETTI (ALTO SINISTRA)
 ========================= */
 
 .work {
@@ -85,7 +85,7 @@ body {
 }
 
 /* =========================
-   NOME BASSO CENTRATO
+   NOME (RIMESSO)
 ========================= */
 
 .name-bottom {
@@ -97,23 +97,4 @@ body {
   font-family: "HC Gleam";
   font-size: 28px;
   color: #FF4FB8;
-}
-
-/* =========================
-   PROJECT PAGES
-========================= */
-
-.project-page-body {
-  background: white;
-}
-
-.project-page {
-  margin: 0;
-  padding: 0;
-}
-
-.project-page img {
-  width: 100%;
-  display: block;
-  margin: 0;
 }
