@@ -1,12 +1,7 @@
 
 /* =========================
-   FONT (SENZA FALLBACK CONFUSO)
+   FONTS
 ========================= */
-
-@font-face {
-  font-family: "Degular";
-  src: url("./fonts/degular.otf") format("opentype");
-}
 
 @font-face {
   font-family: "HC Gleam";
@@ -24,7 +19,7 @@
 }
 
 /* =========================
-   RESET
+   RESET BASE
 ========================= */
 
 body {
@@ -32,7 +27,7 @@ body {
   padding: 0;
   background: #FFEAF1;
   color: #FF4FB8;
-  overflow: hidden;
+  overflow: hidden; /* HOME pulita */
 }
 
 /* =========================
@@ -50,7 +45,7 @@ body {
 }
 
 /* =========================
-   NAME LEFT (HC GLEAM FORZATO)
+   NOME SINISTRA (FIX FONT)
 ========================= */
 
 .name-left {
@@ -62,19 +57,17 @@ body {
   flex-direction: column;
   line-height: 0.85;
 
-  font-family: "HC Gleam"; /* 🔥 QUI FORZATO */
+  font-family: "HC Gleam", serif;
+  z-index: 5;
 }
 
-.paola {
-  font-size: 120px;
-}
-
+.paola,
 .moraca {
   font-size: 120px;
 }
 
 /* =========================
-   WORK
+   WORK DESTRA
 ========================= */
 
 .work {
@@ -84,26 +77,50 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+
+  z-index: 5;
 }
 
+/* WORK TITLE */
 .work-title {
   font-family: "New Spirit Bold";
   font-size: 22px;
   margin-bottom: 6px;
 }
 
+/* PROGETTI */
 .project {
   font-family: "New Spirit";
   font-size: 16px;
   text-decoration: none;
   color: #FF4FB8;
+
   line-height: 1.0;
   letter-spacing: 0.4px;
-  transition: 0.3s;
 }
 
 .project:hover {
-  transform: translateX(5px);
   opacity: 0.6;
+  transform: translateX(5px);
+}
+
+/* =========================
+   PROJECT PAGES (IMPORTANTE)
+========================= */
+
+.project-page-body {
+  margin: 0;
+  background: white;
+}
+
+.project-page {
+  margin: 0;
+  padding: 0;
+}
+
+.project-page img {
+  width: 100%;
+  display: block;
+  margin: 0;
 }
