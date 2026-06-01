@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shutter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top">
+  <a href="index.html">← BACK</a>
+  <div>SHUTTER</div>
+</header>
+
+<main class="project-page">
+
+  <img src="images/shutter/1.png">
+  <img src="images/shutter/2.png">
+  <img src="images/shutter/3.png">
+  <img src="images/shutter/4.png">
+  <img src="images/shutter/5.png">
+  <img src="images/shutter/6.png">
+  <img src="images/shutter/7.png">
+  <img src="images/shutter/8.png">
+  <img src="images/shutter/9.png">
+
+</main>
+
+</body>
+</html>
