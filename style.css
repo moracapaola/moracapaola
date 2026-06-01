@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* BACKGROUND */
+/* BACKGROUND HOME */
 .bg {
   position: fixed;
   inset: 0;
@@ -16,7 +16,7 @@ body {
   z-index: 0;
 }
 
-/* HEADER */
+/* HEADER HOME */
 .top {
   position: fixed;
   top: 0;
@@ -30,13 +30,13 @@ body {
   z-index: 10;
 }
 
-/* LEFT NAME */
+/* NOME GRANDE */
 .left {
   display: flex;
   flex-direction: column;
   font-family: "HC Gleam", serif;
-  color: #FF4FB8;
   line-height: 0.85;
+  color: #FF4FB8;
 }
 
 .big {
@@ -46,9 +46,9 @@ body {
 
 /* MENU */
 .menu {
+  font-family: "New Spirit", serif;
   font-size: 14px;
   letter-spacing: 1px;
-  cursor: pointer;
   color: #FF4FB8;
 }
 
@@ -65,12 +65,12 @@ body {
   z-index: 5;
 }
 
-/* PROJECT LINKS */
 .project {
   font-size: 14px;
-  text-decoration: none;
+  font-family: "Degular", sans-serif;
   color: #FF4FB8;
-  transition: 0.3s ease;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .project:hover {
@@ -82,22 +82,23 @@ body {
   opacity: 0.3;
 }
 
-/* CASE STUDY IMAGES */
+/* ===== CASE STUDY ===== */
+
+body.project-page-body {
+  background: #ffffff;
+}
+
 .project-page {
-  padding: 120px 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .project-page img {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto 60px auto;
+  height: auto;
   display: block;
+  margin: 0;
 }
-
-/* Z-INDEX FIX */
-.bg { z-index: 0; }
-.projects { z-index: 5; }
-.top { z-index: 10; position: fixed; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
