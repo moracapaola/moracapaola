@@ -1,7 +1,5 @@
 
-/* =========================
-   FONTS
-========================= */
+/* ===== FONTS ===== */
 
 @font-face {
   font-family: "HC Gleam";
@@ -18,9 +16,7 @@
   src: url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
-/* =========================
-   RESET BASE
-========================= */
+/* ===== BASE ===== */
 
 body {
   margin: 0;
@@ -30,9 +26,7 @@ body {
   overflow: hidden; /* HOME pulita */
 }
 
-/* =========================
-   COVER
-========================= */
+/* ===== COVER ===== */
 
 .bg {
   position: fixed;
@@ -44,9 +38,7 @@ body {
   pointer-events: none;
 }
 
-/* =========================
-   NOME SINISTRA (FIX FONT)
-========================= */
+/* ===== NOME SINISTRA ===== */
 
 .name-left {
   position: absolute;
@@ -66,9 +58,7 @@ body {
   font-size: 120px;
 }
 
-/* =========================
-   WORK DESTRA
-========================= */
+/* ===== WORK DESTRA ===== */
 
 .work {
   position: absolute;
@@ -77,27 +67,23 @@ body {
 
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 
   z-index: 5;
 }
 
-/* WORK TITLE */
 .work-title {
   font-family: "New Spirit Bold";
   font-size: 22px;
   margin-bottom: 6px;
 }
 
-/* PROGETTI */
 .project {
   font-family: "New Spirit";
   font-size: 16px;
   text-decoration: none;
   color: #FF4FB8;
-
-  line-height: 1.0;
-  letter-spacing: 0.4px;
+  line-height: 1.05;
 }
 
 .project:hover {
@@ -105,13 +91,12 @@ body {
   transform: translateX(5px);
 }
 
-/* =========================
-   PROJECT PAGES (IMPORTANTE)
-========================= */
+/* ===== PROJECT PAGES ===== */
 
 .project-page-body {
   margin: 0;
   background: white;
+  overflow-y: auto;
 }
 
 .project-page {
