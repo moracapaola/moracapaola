@@ -1,5 +1,7 @@
 
-/* ===== FONTS ===== */
+/* =========================
+   FONTS
+========================= */
 
 @font-face {
   font-family: "HC Gleam";
@@ -16,17 +18,21 @@
   src: url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
-/* ===== BASE ===== */
+/* =========================
+   BASE
+========================= */
 
 body {
   margin: 0;
   padding: 0;
   background: #FFEAF1;
   color: #FF4FB8;
-  overflow: hidden; /* HOME pulita */
+  overflow: hidden;
 }
 
-/* ===== COVER ===== */
+/* =========================
+   COVER
+========================= */
 
 .bg {
   position: fixed;
@@ -38,37 +44,18 @@ body {
   pointer-events: none;
 }
 
-/* ===== NOME SINISTRA ===== */
+/* =========================
+   WORK (ALTO SINISTRA)
+========================= */
 
-.name-left {
+.work {
   position: absolute;
   top: 40px;
   left: 40px;
 
   display: flex;
   flex-direction: column;
-  line-height: 0.85;
-
-  font-family: "HC Gleam", serif;
-  z-index: 5;
-}
-
-.paola,
-.moraca {
-  font-size: 120px;
-}
-
-/* ===== WORK DESTRA ===== */
-
-.work {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
+  gap: 4px;
   z-index: 5;
 }
 
@@ -91,21 +78,17 @@ body {
   transform: translateX(5px);
 }
 
-/* ===== PROJECT PAGES ===== */
+/* =========================
+   NAME (BASSO SINISTRA)
+========================= */
 
-.project-page-body {
-  margin: 0;
-  background: white;
-  overflow-y: auto;
-}
+.name-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
 
-.project-page {
-  margin: 0;
-  padding: 0;
-}
-
-.project-page img {
-  width: 100%;
-  display: block;
-  margin: 0;
+  font-family: "New Spirit Bold"; /* 🔥 più bold come richiesto */
+  font-size: 48px;
+  line-height: 0.9;
+  z-index: 5;
 }
