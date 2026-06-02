@@ -18,6 +18,11 @@
   src: url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Oi";
+  src: url("./fonts/Oi-Regular.ttf") format("truetype");
+}
+
 /* =========================
    BASE
 ========================= */
@@ -45,7 +50,7 @@ body {
 }
 
 /* =========================
-   WORK (ALTO SINISTRA)
+   WORK
 ========================= */
 
 .work {
@@ -56,7 +61,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-
   z-index: 5;
 }
 
@@ -72,7 +76,6 @@ body {
   text-decoration: none;
   color: #FF4FB8;
   line-height: 1.05;
-  letter-spacing: 0.4px;
 }
 
 .project:hover {
@@ -81,7 +84,7 @@ body {
 }
 
 /* =========================
-   ABOUT (ALTO DESTRA)
+   ABOUT LINK
 ========================= */
 
 .about-link {
@@ -102,7 +105,7 @@ body {
 }
 
 /* =========================
-   NAME (BASSO SINISTRA)
+   NAME (OI FONT)
 ========================= */
 
 .name-bottom {
@@ -110,9 +113,31 @@ body {
   bottom: 40px;
   left: 40px;
 
-  font-family: "HC Gleam", serif;
-  font-size: 48px;
-  line-height: 0.9;
-
   z-index: 5;
+}
+
+.oi-name {
+  font-family: "Oi";
+  font-size: 90px;
+  line-height: 0.85;
+}
+
+/* =========================
+   PROJECT PAGES (FIX SCROLL)
+========================= */
+
+.project-page-body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow-y: auto; /* 🔥 IMPORTANTE */
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.project-page img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
 }
