@@ -50,7 +50,7 @@ body{
 }
 
 /* =========================
-   LEFT MENU
+   LEFT MENU (WORK)
 ========================= */
 
 .work{
@@ -63,6 +63,7 @@ body{
   z-index:10;
 }
 
+/* TITOLI (WORK) */
 .work-title{
   font-family:"New Spirit Bold";
   font-size:24px;
@@ -76,7 +77,7 @@ body{
   color:#FFEAF1;
 }
 
-/* submenu */
+/* ACCORDION */
 .menu-group{
   display:flex;
   flex-direction:column;
@@ -93,12 +94,14 @@ body{
   display:flex;
 }
 
+/* PROGETTI */
 .project{
   font-family:"New Spirit";
   font-size:18px;
   font-weight:600;
   color:#FF4FB8;
   text-decoration:none;
+  transition:color 0.2s ease;
 }
 
 .project:hover{
@@ -106,7 +109,7 @@ body{
 }
 
 /* =========================
-   ABOUT RIGHT SIDE
+   ABOUT (DESTRA)
 ========================= */
 
 .about-link{
@@ -143,7 +146,7 @@ body{
 }
 
 /* =========================
-   FOOTER
+   FOOTER (FIX CORRETTO)
 ========================= */
 
 .footer{
@@ -159,6 +162,7 @@ body{
   z-index:10;
 }
 
+/* blocchi */
 .footer-left,
 .footer-center,
 .footer-right{
@@ -167,24 +171,31 @@ body{
   align-items:center;
 }
 
+/* LABEL = MOBILE / EMAIL / LINKEDIN */
 .label{
   font-family:"New Spirit Bold";
+  font-weight:700;
   text-transform:uppercase;
+  font-size:18px;
+  color:#FF4FB8;
 }
 
+/* VALUE = contenuto */
 .value{
   font-family:"New Spirit";
+  font-weight:400;
   font-size:18px;
-  font-weight:600;
   color:#FF4FB8;
   text-decoration:none;
   transition:color 0.2s ease;
 }
 
+/* hover colore testo */
 .value:hover{
   color:#FFEAF1;
 }
 
+/* telefono non cliccabile */
 .footer-left .value{
   pointer-events:none;
 }
@@ -211,6 +222,7 @@ body{
   display:block;
 }
 
+/* iframe */
 .external-iframe{
   width:100%;
   height:100vh;
@@ -262,16 +274,16 @@ body{
     font-size:64px;
   }
 
+  .about-link{
+    top:20px;
+    right:20px;
+    font-size:22px;
+  }
+
   .footer{
     flex-direction:column;
     gap:10px;
     align-items:flex-start;
     padding:0 20px;
-  }
-
-  .about-link{
-    top:20px;
-    right:20px;
-    font-size:22px;
   }
 }
