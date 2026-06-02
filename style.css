@@ -1,57 +1,150 @@
-/* RESET */
+
+/* =========================
+   RESET BASE
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:#FFEAF1;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  background:#FFEAF1;
 }
 
-/* COVER */
+/* =========================
+   FONTS (assicurati nomi corretti file)
+========================= */
+
+@font-face {
+  font-family: "HC Gleam";
+  src: url("./fonts/hc-gleam.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "New Spirit";
+  src: url("./fonts/new-spirit.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "New Spirit Bold";
+  src: url("./fonts/new-spirit-bold.otf") format("opentype");
+}
+
+/* =========================
+   HOME COVER
+========================= */
+
+.home{
+  overflow:hidden;
+}
+
 .bg{
-    position:fixed;
-    inset:0;
-    background-image:url("./images/cover.png");
-    background-size:cover;
-    background-position:center;
-    z-index:0;
+  position:fixed;
+  inset:0;
+  background-image:url("./images/cover.png");
+  background-size:cover;
+  background-position:center;
+  z-index:0;
 }
 
-/* MENU */
+/* =========================
+   MENU WORK + ABOUT + CONTACT
+========================= */
+
 .work{
-    position:absolute;
-    top:40px;
-    left:40px;
+  position:absolute;
+  top:40px;
+  left:40px;
 
-    display:flex;
-    flex-direction:column;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
 
-    gap:3px;
-
-    z-index:10;
+  z-index:10;
 }
 
 .work-title{
-    font-family:"New Spirit Bold";
-    font-size:22px;
-    color:#FF4FB8;
+  font-family:"New Spirit Bold";
+  font-size:22px;
+  color:#FF4FB8;
+
+  margin-bottom:6px;
 }
 
 .project{
-    font-family:"New Spirit";
-    font-size:18px;
-    color:#FF4FB8;
-    text-decoration:none;
+  font-family:"New Spirit";
+  font-size:18px;
+  line-height:1.05;
 
-    line-height:1.05;
+  color:#FF4FB8;
+  text-decoration:none;
 }
 
-/* NAME */
+.project:hover{
+  opacity:0.6;
+}
+
+/* =========================
+   NAME
+========================= */
+
 .name{
-    position:absolute;
-    left:40px;
-    bottom:30px;
+  position:absolute;
+  left:40px;
+  bottom:30px;
 
-    font-family:"HC Gleam";
-    font-size:110px;
-    color:#FF4FB8;
+  font-family:"HC Gleam";
+  font-size:110px;
+  line-height:0.8;
 
-    line-height:0.8;
+  color:#FF4FB8;
+
+  z-index:10;
+}
+
+/* =========================
+   PROJECT PAGES
+========================= */
+
+.project-page-body{
+  margin:0;
+  padding:0;
+  background:white;
+}
+
+.project-page{
+  width:100%;
+  overflow-x:hidden;
+}
+
+.project-page img{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:0;
+}
+
+/* =========================
+   ABOUT + CONTACT (FULLSCREEN IMAGE)
+========================= */
+
+.single-page{
+  margin:0;
+  padding:0;
+
+  width:100vw;
+  height:100vh;
+
+  overflow:hidden;
+  background:white;
+}
+
+.single-page img{
+  width:100vw;
+  height:100vh;
+  object-fit:contain;
+  display:block;
 }
