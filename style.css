@@ -1,6 +1,11 @@
-/* --------------------
-FONTS
--------------------- */
+/* =========================
+   FONTS
+========================= */
+
+@font-face {
+    font-family: "HC Gleam";
+    src: url("./fonts/hc-gleam.otf") format("opentype");
+}
 
 @font-face {
     font-family: "New Spirit";
@@ -17,9 +22,17 @@ FONTS
     src: url("./fonts/degular.otf") format("opentype");
 }
 
-/* --------------------
-HOME
--------------------- */
+/* =========================
+   SPACING
+========================= */
+
+:root{
+    --menu-spacing: 3px;
+}
+
+/* =========================
+   HOME
+========================= */
 
 .home{
     margin:0;
@@ -27,7 +40,7 @@ HOME
     background:#FFEAF1;
 }
 
-/* cover */
+/* COVER */
 
 .bg{
     position:fixed;
@@ -37,10 +50,11 @@ HOME
     background-size:cover;
     background-position:center;
 
+    pointer-events:none;
     z-index:0;
 }
 
-/* work */
+/* WORK */
 
 .work{
     position:absolute;
@@ -51,6 +65,8 @@ HOME
 
     display:flex;
     flex-direction:column;
+
+    gap:var(--menu-spacing);
 }
 
 .work-title{
@@ -59,7 +75,7 @@ HOME
 
     color:#FF4FB8;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .project{
@@ -68,15 +84,15 @@ HOME
 
     line-height:1.05;
 
-    text-decoration:none;
     color:#FF4FB8;
+    text-decoration:none;
 }
 
 .project:hover{
     opacity:.6;
 }
 
-/* menu right */
+/* ABOUT + CONTACT */
 
 .menu-right{
     position:absolute;
@@ -90,7 +106,7 @@ HOME
     flex-direction:column;
     align-items:flex-end;
 
-    gap:4px;
+    gap:var(--menu-spacing);
 }
 
 .menu-right a{
@@ -105,30 +121,36 @@ HOME
     opacity:.6;
 }
 
-/* nome */
+/* NAME */
 
 .name{
     position:absolute;
 
     left:40px;
-    bottom:40px;
+    bottom:30px;
 
     z-index:10;
 
-    font-family:"HC Gleam";
-    font-size:90px;
+    font-family:"hc-gleam";
+    font-size:110px;
 
-    line-height:.82;
+    line-height:0.78;
 
     color:#FF4FB8;
 }
-/* --------------------
-PROJECT PAGES
--------------------- */
+
+/* =========================
+   PROJECT PAGES
+========================= */
 
 .project-page-body{
     margin:0;
+    padding:0;
+
     background:white;
+
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 .project-page{
@@ -138,17 +160,23 @@ PROJECT PAGES
 .project-page img{
     width:100%;
     height:auto;
+
     display:block;
+    margin:0;
+    padding:0;
 }
 
-/* --------------------
-ABOUT + CONTACT
--------------------- */
+/* =========================
+   ABOUT + CONTACT PAGES
+========================= */
 
 .single-page{
     margin:0;
+    padding:0;
+
     width:100vw;
     height:100vh;
+
     overflow:hidden;
     background:white;
 }
@@ -158,5 +186,6 @@ ABOUT + CONTACT
     height:100vh;
 
     object-fit:contain;
+
     display:block;
 }
