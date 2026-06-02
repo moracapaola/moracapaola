@@ -1,3 +1,4 @@
+
 /* =========================
    RESET BASE
 ========================= */
@@ -86,7 +87,7 @@ body{
 }
 
 .project:hover{
-  opacity:0.6;
+  color:#FFEAF1; /* 🔥 cambio colore testo */
 }
 
 /* =========================
@@ -121,7 +122,7 @@ body{
   justify-content:space-between;
   padding:0 40px;
 
-  font-size:16px; /* 🔥 più grande */
+  font-size:18px; /* 🔥 uguale ai project */
   color:#FF4FB8;
 
   z-index:10;
@@ -135,31 +136,28 @@ body{
   align-items:center;
 }
 
-/* LABEL (MOBILE / EMAIL / LINKEDIN) */
+/* label uguale ma bold */
 .label{
   font-family:"New Spirit Bold";
   font-weight:700;
-  text-transform:uppercase; /* 🔥 maiuscolo forzato */
+  color:#FF4FB8;
 }
 
-/* VALORI */
+/* valori = stessa dimensione project */
 .value{
   font-family:"New Spirit";
+  font-size:18px;
   font-weight:600;
   color:#FF4FB8;
   text-decoration:none;
-
-  transition:background 0.2s ease;
-  padding:2px 4px;
-  border-radius:2px;
 }
 
-/* 🔥 HOVER ROSA SOLIDO (non trasparenza) */
+/* 🔥 hover SOLO cambio colore testo */
 .value:hover{
-  background:#FFEAF1;
+  color:#FFEAF1;
 }
 
-/* MOBILE NON LINK */
+/* MOBILE NON CLICCABILE */
 .footer-left .value{
   pointer-events:none;
 }
