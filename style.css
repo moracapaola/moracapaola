@@ -65,6 +65,8 @@ body{
   flex-direction:column;
 }
 
+/* TITOLI */
+
 .work-title{
   font-family:"New Spirit Bold";
   font-size:24px;
@@ -78,6 +80,8 @@ body{
   color:#FFEAF1;
 }
 
+/* SUBMENU (se lo usi) */
+
 .submenu{
   display:none;
   flex-direction:column;
@@ -88,6 +92,8 @@ body{
 .menu-group:hover .submenu{
   display:flex;
 }
+
+/* PROGETTI */
 
 .project{
   font-family:"New Spirit";
@@ -219,7 +225,7 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES
+   PROJECT PAGES (BASE UNICO)
 ========================= */
 
 .project-page-body{
@@ -233,14 +239,7 @@ body{
   overflow-x:hidden;
 }
 
-.project-page img{
-  width:100%;
-  max-width:1920px;
-  height:auto;
-  display:block;
-  margin:0 auto;
-}
-
+.project-page img,
 .project-page video{
   width:100%;
   height:auto;
@@ -285,17 +284,12 @@ body{
 
 .video-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2, 1fr);
+  width:100%;
   gap:0;
 }
 
 .video-grid video{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.single-video{
   width:100%;
   height:auto;
   display:block;
