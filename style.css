@@ -348,3 +348,34 @@ body{
     font-size:16px;
   }
 }
+/* =========================
+   OPEN TO WORK SERIES
+========================= */
+
+.video-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+}
+
+.video-grid video{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.single-video{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+}
