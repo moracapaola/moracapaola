@@ -1,3 +1,4 @@
+
 /* =========================
    RESET BASE
 ========================= */
@@ -103,7 +104,7 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES
+   PROJECT PAGES (FIX STRUTTURA)
 ========================= */
 
 .project-page-body{
@@ -112,11 +113,14 @@ body{
   background:white;
 }
 
+/* 🔴 FIX IMPORTANTE: layout stabile */
 .project-page{
   width:100%;
-  overflow-x:hidden;
+  min-height:100vh;
+  display:block;
 }
 
+/* immagini */
 .project-page img{
   width:100%;
   height:auto;
@@ -124,8 +128,7 @@ body{
   margin:0;
 }
 
-/* VIDEO RESPONSIVE */
-
+/* video */
 .project-page video{
   width:100%;
   height:auto;
@@ -134,13 +137,19 @@ body{
 }
 
 /* =========================
-   IFRAME (ISTD PROJECT)
+   IFRAME (ISTD PROJECT FIX)
 ========================= */
 
 .external-iframe{
   width:100%;
   height:100vh;
   border:none;
+  display:block;
+}
+
+/* safety per iframe in flow */
+.project-page iframe{
+  width:100%;
   display:block;
 }
 
