@@ -66,13 +66,15 @@ body{
   z-index:10;
 }
 
-/* TITOLI (WORK / ABOUT) */
+/* TITOLI (ORA ANCHE LINKABILI) */
 .work-title{
   font-family:"New Spirit Bold";
   font-size:24px;
   font-weight:700;
   color:#FF4FB8;
   margin:14px 0 6px 0;
+  text-decoration:none;
+  display:block;
 }
 
 /* PROGETTI */
