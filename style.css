@@ -158,7 +158,7 @@ body{
 }
 
 /* =========================
-   FOOTER (SAFE FLEX WRAP)
+   FOOTER
 ========================= */
 
 .footer{
@@ -186,10 +186,7 @@ body{
   gap:6px;
 }
 
-/* =========================
-   TEXT STYLE
-========================= */
-
+/* LABEL (MOBILE / EMAIL / LINKEDIN) */
 .label{
   font-family:"New Spirit Bold";
   font-size:18px;
@@ -198,9 +195,10 @@ body{
   color:#FF4FB8;
 }
 
+/* VALUE (DOPO I DUE PUNTI) 🔥 PIÙ GRANDE */
 .value{
   font-family:"New Spirit";
-  font-size:18px;
+  font-size:20px;
   font-weight:400;
   color:#FF4FB8;
   text-decoration:none;
@@ -212,7 +210,7 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES (ROBUSTO)
+   PROJECT PAGES
 ========================= */
 
 .project-page-body{
@@ -228,7 +226,6 @@ body{
   overflow-x:hidden;
 }
 
-/* FIX SAFARI/IMG/VIDEO */
 .project-page img,
 .project-page video{
   width:100%;
