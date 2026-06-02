@@ -71,14 +71,16 @@ body{
   font-size:22px;
   color:#FF4FB8;
   margin-bottom:6px;
+  font-weight:700; /* 🔥 upgrade coerenza */
 }
 
 .project{
-  font-family:"New Spirit";
+  font-family:"New Spirit Bold"; /* 🔥 più coerenza con richiesta bold */
   font-size:18px;
   line-height:1.05;
   color:#FF4FB8;
   text-decoration:none;
+  font-weight:600;
 }
 
 .project:hover{
@@ -139,6 +141,13 @@ body{
   width:100%;
   height:100vh;
   border:none;
+  display:block;
+  margin:0; /* 🔥 elimina micro-gap finale */
+  padding:0;
+}
+
+/* safety iframe flow */
+.project-page iframe{
   display:block;
 }
 
