@@ -38,6 +38,22 @@ body{
 }
 
 /* =========================
+   RESPONSIVE TYPO SYSTEM (FIX MOBILE)
+========================= */
+
+html{
+  font-size:16px;
+}
+
+@media (max-width:768px){
+  html{ font-size:14px; }
+}
+
+@media (max-width:480px){
+  html{ font-size:13px; }
+}
+
+/* =========================
    HOME COVER
 ========================= */
 
@@ -54,23 +70,23 @@ body{
   z-index:0;
 }
 
-/* 🔥 COVER TEXT OVERLAY */
+/* =========================
+   COVER TEXT OVERLAY
+========================= */
+
 .cover-text{
   position:fixed;
   top:50%;
   left:40px;
-
   transform:translateY(-60%);
-
   width:min(600px, 40vw);
   height:auto;
-
   z-index:2;
   pointer-events:none;
 }
 
 /* =========================
-   WORK (SINISTRA)
+   WORK
 ========================= */
 
 .work{
@@ -87,7 +103,7 @@ body{
 
 .work-title{
   font-family:"New Spirit Bold";
-  font-size:24px;
+  font-size:1.2rem;
   font-weight:700;
   color:#FF4FB8;
   cursor:pointer;
@@ -111,7 +127,7 @@ body{
 
 .project{
   font-family:"New Spirit";
-  font-size:18px;
+  font-size:1rem;
   font-weight:600;
   line-height:1.05;
   color:#FF4FB8;
@@ -124,50 +140,32 @@ body{
 }
 
 /* =========================
-   OPEN TO WORK (CENTRO)
+   OPEN TO WORK / ABOUT
 ========================= */
 
-.center-link{
-  position:absolute;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-
-  font-family:"New Spirit Bold";
-  font-size:24px;
-  font-weight:700;
-
-  color:#FF4FB8;
-  text-decoration:none;
-  transition:color .2s ease;
-
-  z-index:10;
-}
-
-.center-link:hover{
-  color:#FFEAF1;
-}
-
-/* =========================
-   ABOUT (DESTRA)
-========================= */
-
+.center-link,
 .about-link{
   position:absolute;
   top:20px;
-  right:40px;
-
   font-family:"New Spirit Bold";
-  font-size:24px;
+  font-size:1.2rem;
   font-weight:700;
-
   color:#FF4FB8;
   text-decoration:none;
   transition:color .2s ease;
-
   z-index:10;
 }
 
+.center-link{
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.about-link{
+  right:40px;
+}
+
+.center-link:hover,
 .about-link:hover{
   color:#FFEAF1;
 }
@@ -203,7 +201,7 @@ body{
 
 .label{
   font-family:"New Spirit Bold";
-  font-size:18px;
+  font-size:1rem;
   font-weight:700;
   text-transform:uppercase;
   color:#FF4FB8;
@@ -211,7 +209,7 @@ body{
 
 .value{
   font-family:"New Spirit";
-  font-size:20px;
+  font-size:1.15rem; /* 🔥 più leggibile su mobile */
   font-weight:400;
   color:#FF4FB8;
   text-decoration:none;
@@ -232,7 +230,6 @@ body{
   background:white;
 }
 
-/* contenitore vero */
 .project-page{
   width:100%;
   margin:0;
@@ -241,30 +238,34 @@ body{
 }
 
 /* =========================
-   MEDIA (IMG + GIF)
+   MEDIA
 ========================= */
 
 .project-page img,
 .project-page video{
   width:100%;
-  max-width:100%;
   height:auto;
   display:block;
+  max-width:100%;
 }
 
 /* =========================
-   IFRAME FIX (CRUCIALE PER SAFARI)
+   IFRAME (CLAY TO CLOUD FIX DEFINITIVO)
 ========================= */
 
 .external-iframe{
   width:100%;
   height:100vh;
-  height:100svh; /* Safari mobile fix */
   border:0;
   display:block;
 }
 
-/* fallback sicurezza */
+@media (max-width:768px){
+  .external-iframe{
+    height:100dvh;
+  }
+}
+
 iframe{
   max-width:100%;
 }
@@ -284,9 +285,37 @@ iframe{
   font-family:"New Spirit Bold";
   text-decoration:none;
   color:#FF4FB8;
-  font-size:18px;
+  font-size:1rem;
 }
 
 .top a:hover{
   color:#FFEAF1;
+}
+
+/* =========================
+   MOBILE FINISHING
+========================= */
+
+@media (max-width:768px){
+
+  .work{
+    top:20px;
+    left:20px;
+  }
+
+  .center-link,
+  .about-link{
+    top:20px;
+    font-size:1rem;
+  }
+
+  .about-link{
+    right:20px;
+  }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:0 20px 20px;
+  }
 }
