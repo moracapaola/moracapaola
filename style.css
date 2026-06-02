@@ -1,6 +1,6 @@
 
 /* =========================
-   FONTS (RIPRISTINO CORRETTO)
+   FONTS
 ========================= */
 
 @font-face {
@@ -19,7 +19,7 @@
 }
 
 /* =========================
-   BASE
+   RESET BASE
 ========================= */
 
 body {
@@ -66,11 +66,13 @@ body {
 }
 
 .project {
-  font-family: "New Spirit"; /* ✔ RIPRISTINATO */
+  font-family: "New Spirit";
   font-size: 16px;
   text-decoration: none;
   color: #FF4FB8;
+
   line-height: 1.05;
+  letter-spacing: 0.4px;
 }
 
 .project:hover {
@@ -108,8 +110,9 @@ body {
   bottom: 40px;
   left: 40px;
 
-  font-family: "New Spirit Bold";
+  font-family: "HC Gleam", serif;
   font-size: 48px;
   line-height: 0.9;
+
   z-index: 5;
 }
