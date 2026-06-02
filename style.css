@@ -18,17 +18,17 @@ body{
 ========================= */
 
 @font-face {
-  font-family: "HC Gleam";
+  font-family: "hc gleam";
   src: url("./fonts/hc-gleam.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "New Spirit";
+  font-family: "new spirit";
   src: url("./fonts/new-spirit.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "New Spirit Bold";
+  font-family: "new spirit bold";
   src: url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
@@ -67,8 +67,8 @@ body{
 
 /* 🔥 TITOLI (WORK / ABOUT / CONTACT) */
 .work-title{
-  font-family:"New Spirit Bold";
-  font-size:22px;
+  font-family:"new spirit bold";
+  font-size:24px;
   font-weight:700;
   color:#FF4FB8;
   margin:14px 0 6px 0;
@@ -76,7 +76,7 @@ body{
 
 /* 🔥 PROGETTI (SOTTOTITOLI) */
 .project{
-  font-family:"New Spirit";
+  font-family:"new spirit";
   font-size:18px;
   font-weight:600;
   line-height:1.05;
@@ -98,7 +98,7 @@ body{
   left:40px;
   bottom:30px;
 
-  font-family:"HC Gleam";
+  font-family:"hc gleam";
   font-size:110px;
   line-height:0.8;
 
@@ -187,11 +187,11 @@ body{
   }
 
   .work-title{
-    font-size:18px;
+    font-size:24px;
   }
 
   .project{
-    font-size:16px;
+    font-size:18px;
   }
 
   .name{
