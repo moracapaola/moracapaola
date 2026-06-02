@@ -223,7 +223,7 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES
+   PROJECT BASE
 ========================= */
 
 .project-page-body{
@@ -232,98 +232,61 @@ body{
   background:white;
 }
 
+/* contenitore vero */
 .project-page{
   width:100%;
-  max-width:1920px;
-  margin:0 auto;
+  margin:0;
+  padding:0;
   overflow-x:hidden;
 }
+
+/* =========================
+   MEDIA (IMG + GIF)
+========================= */
 
 .project-page img,
 .project-page video{
   width:100%;
+  max-width:100%;
   height:auto;
   display:block;
-  max-width:100%;
 }
 
 /* =========================
-   OPEN TO WORK SERIES
+   IFRAME FIX (CRUCIALE PER SAFARI)
 ========================= */
 
-.video-grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  width:100%;
-  gap:0;
-}
-
-.video-grid video{
-  width:100%;
-  height:auto;
-  display:block;
-  max-width:100%;
-}
-
-/* =========================
-   ABOUT PAGE
-========================= */
-
-.single-page{
-  margin:0;
-  padding:0;
+.external-iframe{
   width:100%;
   height:100vh;
-  overflow:hidden;
-  background:white;
-}
-
-.single-page img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
+  height:100svh; /* Safari mobile fix */
+  border:0;
   display:block;
 }
 
+/* fallback sicurezza */
+iframe{
+  max-width:100%;
+}
+
 /* =========================
-   MOBILE
+   BACK BUTTON
 ========================= */
 
-@media (max-width:768px){
+.top{
+  position:sticky;
+  top:0;
+  padding:20px 40px;
+  z-index:10;
+}
 
-  .work{
-    top:20px;
-    left:20px;
-  }
+.top a{
+  font-family:"New Spirit Bold";
+  text-decoration:none;
+  color:#FF4FB8;
+  font-size:18px;
+}
 
-  .center-link{
-    top:20px;
-    font-size:20px;
-  }
-
-  .about-link{
-    top:20px;
-    right:20px;
-    font-size:20px;
-  }
-
-  .cover-text{
-    left:20px;
-    width:70vw;
-    transform:translateY(-55%);
-  }
-
-  .work-title{
-    font-size:20px;
-  }
-
-  .project{
-    font-size:16px;
-  }
-
-  .footer{
-    flex-direction:column;
-    align-items:flex-start;
-    padding:0 20px 20px;
-  }
+.top a:hover{
+  color:#FFEAF1;
 }
