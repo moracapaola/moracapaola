@@ -1,46 +1,57 @@
-<!DOCTYPE html>
-<html lang="it">
+/* RESET */
+body{
+    margin:0;
+    background:#FFEAF1;
+}
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* COVER */
+.bg{
+    position:fixed;
+    inset:0;
+    background-image:url("./images/cover.png");
+    background-size:cover;
+    background-position:center;
+    z-index:0;
+}
 
-<title>Moraca Paola</title>
+/* MENU */
+.work{
+    position:absolute;
+    top:40px;
+    left:40px;
 
-<link rel="stylesheet" href="style.css">
-</head>
+    display:flex;
+    flex-direction:column;
 
-<body class="home">
+    gap:3px;
 
-<div class="bg"></div>
+    z-index:10;
+}
 
-<main>
+.work-title{
+    font-family:"New Spirit Bold";
+    font-size:22px;
+    color:#FF4FB8;
+}
 
-  <!-- MENU UNICO SINISTRA -->
-  <nav class="work">
+.project{
+    font-family:"New Spirit";
+    font-size:18px;
+    color:#FF4FB8;
+    text-decoration:none;
 
-    <div class="work-title">WORK</div>
+    line-height:1.05;
+}
 
-    <a href="clay-to-cloud.html" class="project">1. CLAY TO CLOUD</a>
-    <a href="shutter.html" class="project">2. SHUTTER</a>
-    <a href="proof.html" class="project">3. PROOF</a>
-    <a href="ntu.html" class="project">4. NTU</a>
+/* NAME */
+.name{
+    position:absolute;
+    left:40px;
+    bottom:30px;
 
-    <br>
+    font-family:"HC Gleam";
+    font-size:110px;
+    color:#FF4FB8;
 
-    <a href="about.html" class="project">ABOUT</a>
-    <a href="contact.html" class="project">CONTACT</a>
-
-  </nav>
-
-  <!-- NAME -->
-  <h1 class="name">
-    PAOLA<br>
-    MORACA
-  </h1>
-
-</main>
-
-</body>
-
-</html>
+    line-height:0.8;
+}
