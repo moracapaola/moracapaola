@@ -113,14 +113,11 @@ body{
   background:white;
 }
 
-/* layout stabile */
+/* contenitore stabile */
 .project-page{
   width:100%;
   min-height:100vh;
   display:block;
-
-  /* 🔥 FIX IMPORTANTE: elimina micro-spazi verticali */
-  font-size:0;
 }
 
 /* =========================
@@ -138,7 +135,7 @@ body{
 }
 
 /* =========================
-   IFRAME (ISTD PROJECT FIX)
+   IFRAME ISTD
 ========================= */
 
 .external-iframe{
@@ -148,7 +145,7 @@ body{
   display:block;
 }
 
-/* safety iframe */
+/* sicurezza iframe */
 .project-page iframe{
   width:100%;
   display:block;
