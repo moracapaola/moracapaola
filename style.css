@@ -1,4 +1,4 @@
- /* =========================
+/* =========================
    RESET
 ========================= */
 
@@ -6,10 +6,15 @@
   box-sizing:border-box;
 }
 
-body{
+html, body{
   margin:0;
   padding:0;
+  width:100%;
   overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
   background:#FFEAF1;
 }
 
@@ -153,7 +158,7 @@ body{
 }
 
 /* =========================
-   FOOTER
+   FOOTER (SAFE FLEX WRAP)
 ========================= */
 
 .footer{
@@ -163,10 +168,12 @@ body{
   width:100%;
 
   display:flex;
+  flex-wrap:wrap;
   justify-content:space-between;
-  align-items:center;
+  align-items:flex-start;
 
   padding:0 40px;
+  gap:10px;
 
   z-index:10;
 }
@@ -178,6 +185,10 @@ body{
   align-items:center;
   gap:6px;
 }
+
+/* =========================
+   TEXT STYLE
+========================= */
 
 .label{
   font-family:"New Spirit Bold";
@@ -201,7 +212,7 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES (STABILIZZAZIONE)
+   PROJECT PAGES (ROBUSTO)
 ========================= */
 
 .project-page-body{
@@ -210,7 +221,6 @@ body{
   background:white;
 }
 
-/* 🔴 FIX IMPORTANTE: blocca espansioni strane */
 .project-page{
   width:100%;
   max-width:1920px;
@@ -218,13 +228,13 @@ body{
   overflow-x:hidden;
 }
 
-/* media coerenti */
+/* FIX SAFARI/IMG/VIDEO */
 .project-page img,
 .project-page video{
   width:100%;
   height:auto;
   display:block;
-  margin:0;
+  max-width:100%;
 }
 
 /* =========================
@@ -233,7 +243,7 @@ body{
 
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(2, minmax(0, 1fr));
   width:100%;
   gap:0;
 }
@@ -242,6 +252,7 @@ body{
   width:100%;
   height:auto;
   display:block;
+  max-width:100%;
 }
 
 /* =========================
@@ -251,15 +262,15 @@ body{
 .single-page{
   margin:0;
   padding:0;
-  width:100vw;
+  width:100%;
   height:100vh;
   overflow:hidden;
   background:white;
 }
 
 .single-page img{
-  width:100vw;
-  height:100vh;
+  width:100%;
+  height:100%;
   object-fit:contain;
   display:block;
 }
@@ -297,16 +308,6 @@ body{
   .footer{
     flex-direction:column;
     align-items:flex-start;
-    gap:10px;
     padding:0 20px 20px;
-  }
-
-  .label,
-  .value{
-    font-size:16px;
-  }
-
-  .video-grid{
-    grid-template-columns:1fr;
   }
 }
