@@ -1,6 +1,6 @@
 
 /* =========================
-   FONTS
+   FONT (CORRETTI CON NOMI REALI)
 ========================= */
 
 @font-face {
@@ -19,8 +19,13 @@
 }
 
 @font-face {
+  font-family: "Degular";
+  src: url("./fonts/degular.otf") format("opentype");
+}
+
+@font-face {
   font-family: "Oi";
-  src: url("./fonts/Oi-Regular.ttf") format("truetype");
+  src: url("./fonts/oi-regular.ttf") format("truetype");
 }
 
 /* =========================
@@ -50,7 +55,7 @@ body {
 }
 
 /* =========================
-   WORK
+   WORK (ALTO SINISTRA)
 ========================= */
 
 .work {
@@ -61,6 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
   z-index: 5;
 }
 
@@ -76,6 +82,7 @@ body {
   text-decoration: none;
   color: #FF4FB8;
   line-height: 1.05;
+  letter-spacing: 0.4px;
 }
 
 .project:hover {
@@ -84,7 +91,7 @@ body {
 }
 
 /* =========================
-   ABOUT LINK
+   ABOUT
 ========================= */
 
 .about-link {
@@ -112,7 +119,6 @@ body {
   position: absolute;
   bottom: 40px;
   left: 40px;
-
   z-index: 5;
 }
 
@@ -123,16 +129,15 @@ body {
 }
 
 /* =========================
-   PROJECT PAGES (FIX SCROLL)
+   ABOUT PAGE + PROJECT PAGES
 ========================= */
 
 .project-page-body {
   margin: 0;
   padding: 0;
   background: white;
-  overflow-y: auto; /* 🔥 IMPORTANTE */
+  overflow-y: auto;
   overflow-x: hidden;
-  height: 100vh;
 }
 
 .project-page img {
