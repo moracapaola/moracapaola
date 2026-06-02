@@ -1,4 +1,4 @@
-/* =========================
+ /* =========================
    RESET
 ========================= */
 
@@ -201,16 +201,8 @@ body{
 }
 
 /* =========================
-   PROJECT PAGES (FIX IMPORTANTE)
+   PROJECT PAGES (STABILIZZAZIONE)
 ========================= */
-
-/* 🔴 FIX: impedisce “allargamenti strani” tipo PNG hero */
-.project-page{
-  width:100%;
-  max-width:1920px;
-  margin:0 auto;
-  overflow-x:hidden;
-}
 
 .project-page-body{
   margin:0;
@@ -218,6 +210,15 @@ body{
   background:white;
 }
 
+/* 🔴 FIX IMPORTANTE: blocca espansioni strane */
+.project-page{
+  width:100%;
+  max-width:1920px;
+  margin:0 auto;
+  overflow-x:hidden;
+}
+
+/* media coerenti */
 .project-page img,
 .project-page video{
   width:100%;
