@@ -1,6 +1,6 @@
 
 /* =========================
-   RESET BASE
+   RESET
 ========================= */
 
 *{
@@ -19,22 +19,22 @@ body{
 ========================= */
 
 @font-face {
-  font-family: "New Spirit";
-  src: url("./fonts/new-spirit.otf") format("opentype");
+  font-family:"New Spirit";
+  src:url("./fonts/new-spirit.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "New Spirit Bold";
-  src: url("./fonts/new-spirit-bold.otf") format("opentype");
+  font-family:"New Spirit Bold";
+  src:url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "HC Gleam";
-  src: url("./fonts/hc-gleam.otf") format("opentype");
+  font-family:"HC Gleam";
+  src:url("./fonts/hc-gleam.otf") format("opentype");
 }
 
 /* =========================
-   HOME COVER
+   BACKGROUND
 ========================= */
 
 .home{
@@ -58,36 +58,61 @@ body{
   position:absolute;
   top:40px;
   left:40px;
-
   display:flex;
   flex-direction:column;
-  gap:3px;
-
+  gap:10px;
   z-index:10;
 }
 
+/* TITOLI */
 .work-title{
   font-family:"New Spirit Bold";
   font-size:24px;
   font-weight:700;
   color:#FF4FB8;
-  margin:14px 0 6px 0;
   text-decoration:none;
-  display:block;
+  cursor:pointer;
+  transition:color 0.2s ease;
 }
 
+/* ABOUT hover */
+.work-title:hover{
+  color:#FFEAF1;
+}
+
+/* =========================
+   ACCORDION SUBMENU
+========================= */
+
+.menu-group{
+  display:flex;
+  flex-direction:column;
+}
+
+/* nascosto di default */
+.submenu{
+  display:none;
+  flex-direction:column;
+  gap:3px;
+  margin-left:2px;
+}
+
+/* mostra su hover WORK */
+.menu-group:hover .submenu{
+  display:flex;
+}
+
+/* progetti */
 .project{
   font-family:"New Spirit";
   font-size:18px;
   font-weight:600;
-  line-height:1.05;
   color:#FF4FB8;
   text-decoration:none;
-  margin-left:2px;
 }
 
 .project:hover{
-  color:#FFEAF1; /* 🔥 cambio colore testo */
+  color:#FFEAF1;
 }
 
 /* =========================
@@ -98,13 +123,10 @@ body{
   position:absolute;
   left:40px;
   bottom:30px;
-
   font-family:"HC Gleam";
   font-size:110px;
   line-height:0.8;
-
   color:#FF4FB8;
-
   z-index:10;
 }
 
@@ -117,14 +139,11 @@ body{
   bottom:20px;
   left:0;
   width:100%;
-
   display:flex;
   justify-content:space-between;
   padding:0 40px;
-
-  font-size:18px; /* 🔥 uguale ai project */
+  font-size:18px;
   color:#FF4FB8;
-
   z-index:10;
 }
 
@@ -136,28 +155,26 @@ body{
   align-items:center;
 }
 
-/* label uguale ma bold */
 .label{
   font-family:"New Spirit Bold";
-  font-weight:700;
-  color:#FF4FB8;
+  text-transform:uppercase;
 }
 
-/* valori = stessa dimensione project */
 .value{
   font-family:"New Spirit";
   font-size:18px;
   font-weight:600;
   color:#FF4FB8;
   text-decoration:none;
+  transition:color 0.2s ease;
 }
 
-/* 🔥 hover SOLO cambio colore testo */
+/* hover SOLO colore */
 .value:hover{
   color:#FFEAF1;
 }
 
-/* MOBILE NON CLICCABILE */
+/* mobile non cliccabile */
 .footer-left .value{
   pointer-events:none;
 }
@@ -182,16 +199,14 @@ body{
   width:100%;
   height:auto;
   display:block;
-  margin:0;
 }
 
+/* iframe */
 .external-iframe{
   width:100%;
   height:100vh;
   border:none;
   display:block;
-  margin:0;
-  padding:0;
 }
 
 /* =========================
@@ -211,14 +226,13 @@ body{
   width:100vw;
   height:100vh;
   object-fit:contain;
-  display:block;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
   .work{
     top:20px;
@@ -244,5 +258,10 @@ body{
     gap:10px;
     align-items:flex-start;
     padding:0 20px;
+  }
+
+  /* su mobile submenu sempre visibile */
+  .submenu{
+    display:flex;
   }
 }
