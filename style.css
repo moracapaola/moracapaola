@@ -17,23 +17,23 @@ body{
    FONTS
 ========================= */
 
-@font-face {
+@font-face{
   font-family:"New Spirit";
   src:url("./fonts/new-spirit.otf") format("opentype");
 }
 
-@font-face {
+@font-face{
   font-family:"New Spirit Bold";
   src:url("./fonts/new-spirit-bold.otf") format("opentype");
 }
 
-@font-face {
+@font-face{
   font-family:"HC Gleam";
   src:url("./fonts/hc-gleam.otf") format("opentype");
 }
 
 /* =========================
-   BACKGROUND
+   HOME COVER
 ========================= */
 
 .home{
@@ -50,44 +50,43 @@ body{
 }
 
 /* =========================
-   LEFT MENU (WORK)
+   WORK (SINISTRA)
 ========================= */
 
 .work{
   position:absolute;
   top:40px;
   left:40px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
   z-index:10;
 }
 
-/* TITOLI (WORK) */
+.menu-group{
+  display:flex;
+  flex-direction:column;
+}
+
+/* TITOLI */
+
 .work-title{
   font-family:"New Spirit Bold";
   font-size:24px;
   font-weight:700;
   color:#FF4FB8;
   cursor:pointer;
-  transition:color 0.2s ease;
+  transition:color .2s ease;
 }
 
 .work-title:hover{
   color:#FFEAF1;
 }
 
-/* ACCORDION */
-.menu-group{
-  display:flex;
-  flex-direction:column;
-}
+/* MENU A TENDINA */
 
 .submenu{
   display:none;
   flex-direction:column;
   gap:3px;
-  margin-left:2px;
+  margin-top:6px;
 }
 
 .menu-group:hover .submenu{
@@ -95,16 +94,46 @@ body{
 }
 
 /* PROGETTI */
+
 .project{
   font-family:"New Spirit";
   font-size:18px;
   font-weight:600;
+  line-height:1.05;
+
   color:#FF4FB8;
   text-decoration:none;
-  transition:color 0.2s ease;
+
+  transition:color .2s ease;
 }
 
 .project:hover{
+  color:#FFEAF1;
+}
+
+/* =========================
+   OPEN TO WORK (CENTRO)
+========================= */
+
+.center-link{
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+
+  font-family:"New Spirit Bold";
+  font-size:24px;
+  font-weight:700;
+
+  color:#FF4FB8;
+  text-decoration:none;
+
+  transition:color .2s ease;
+
+  z-index:10;
+}
+
+.center-link:hover{
   color:#FFEAF1;
 }
 
@@ -120,9 +149,13 @@ body{
   font-family:"New Spirit Bold";
   font-size:24px;
   font-weight:700;
+
   color:#FF4FB8;
   text-decoration:none;
-  transition:color 0.2s ease;
+
+  transition:color .2s ease;
+
+  z-index:10;
 }
 
 .about-link:hover{
@@ -136,68 +169,71 @@ body{
 .name{
   position:absolute;
   left:40px;
-  bottom:30px;
+  bottom:90px;
 
   font-family:"HC Gleam";
   font-size:110px;
   line-height:0.8;
+
   color:#FF4FB8;
+
   z-index:10;
 }
 
 /* =========================
-   FOOTER (FIX CORRETTO)
+   FOOTER
 ========================= */
 
 .footer{
   position:absolute;
   bottom:20px;
   left:0;
+
   width:100%;
+
   display:flex;
   justify-content:space-between;
+  align-items:center;
+
   padding:0 40px;
-  font-size:18px;
-  color:#FF4FB8;
+
   z-index:10;
 }
 
-/* blocchi */
 .footer-left,
 .footer-center,
 .footer-right{
   display:flex;
-  gap:8px;
   align-items:center;
+  gap:6px;
 }
 
-/* LABEL = MOBILE / EMAIL / LINKEDIN */
+/* LABEL */
+
 .label{
   font-family:"New Spirit Bold";
+  font-size:18px;
   font-weight:700;
   text-transform:uppercase;
-  font-size:18px;
+
   color:#FF4FB8;
 }
 
-/* VALUE = contenuto */
+/* VALUE */
+
 .value{
   font-family:"New Spirit";
-  font-weight:400;
   font-size:18px;
+  font-weight:400;
+
   color:#FF4FB8;
   text-decoration:none;
-  transition:color 0.2s ease;
+
+  transition:color .2s ease;
 }
 
-/* hover colore testo */
 .value:hover{
   color:#FFEAF1;
-}
-
-/* telefono non cliccabile */
-.footer-left .value{
-  pointer-events:none;
 }
 
 /* =========================
@@ -215,19 +251,29 @@ body{
   overflow-x:hidden;
 }
 
-.project-page img,
+.project-page img{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:0;
+}
+
 .project-page video{
   width:100%;
   height:auto;
   display:block;
+  margin:0;
 }
 
-/* iframe */
+/* IFRAME */
+
 .external-iframe{
   width:100%;
   height:100vh;
   border:none;
   display:block;
+  margin:0;
+  padding:0;
 }
 
 /* =========================
@@ -237,8 +283,10 @@ body{
 .single-page{
   margin:0;
   padding:0;
+
   width:100vw;
   height:100vh;
+
   overflow:hidden;
   background:white;
 }
@@ -246,7 +294,9 @@ body{
 .single-page img{
   width:100vw;
   height:100vh;
+
   object-fit:contain;
+  display:block;
 }
 
 /* =========================
@@ -260,8 +310,20 @@ body{
     left:20px;
   }
 
+  .center-link{
+    top:20px;
+    left:50%;
+    font-size:20px;
+  }
+
+  .about-link{
+    top:20px;
+    right:20px;
+    font-size:20px;
+  }
+
   .work-title{
-    font-size:22px;
+    font-size:20px;
   }
 
   .project{
@@ -270,20 +332,19 @@ body{
 
   .name{
     left:20px;
-    bottom:20px;
+    bottom:120px;
     font-size:64px;
-  }
-
-  .about-link{
-    top:20px;
-    right:20px;
-    font-size:22px;
   }
 
   .footer{
     flex-direction:column;
-    gap:10px;
     align-items:flex-start;
-    padding:0 20px;
+    gap:10px;
+    padding:0 20px 20px;
+  }
+
+  .label,
+  .value{
+    font-size:16px;
   }
 }
