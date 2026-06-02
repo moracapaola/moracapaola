@@ -1,3 +1,4 @@
+
 /* =========================
    RESET BASE
 ========================= */
@@ -18,18 +19,18 @@ body{
 ========================= */
 
 @font-face {
-  font-family: "hc gleam";
-  src: url("./fonts/hc-gleam.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "new spirit";
+  font-family: "New Spirit";
   src: url("./fonts/new-spirit.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "new spirit bold";
+  font-family: "New Spirit Bold";
   src: url("./fonts/new-spirit-bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "HC Gleam";
+  src: url("./fonts/hc-gleam.otf") format("opentype");
 }
 
 /* =========================
@@ -65,18 +66,18 @@ body{
   z-index:10;
 }
 
-/* 🔥 TITOLI (WORK / ABOUT / CONTACT) */
+/* TITOLI (WORK / ABOUT) */
 .work-title{
-  font-family:"new spirit bold";
+  font-family:"New Spirit Bold";
   font-size:24px;
   font-weight:700;
   color:#FF4FB8;
   margin:14px 0 6px 0;
 }
 
-/* 🔥 PROGETTI (SOTTOTITOLI) */
+/* PROGETTI */
 .project{
-  font-family:"new spirit";
+  font-family:"New Spirit";
   font-size:18px;
   font-weight:600;
   line-height:1.05;
@@ -98,7 +99,7 @@ body{
   left:40px;
   bottom:30px;
 
-  font-family:"hc gleam";
+  font-family:"HC Gleam";
   font-size:110px;
   line-height:0.8;
 
@@ -122,15 +123,7 @@ body{
   overflow-x:hidden;
 }
 
-/* immagini e gif */
-.project-page img{
-  width:100%;
-  height:auto;
-  display:block;
-  margin:0;
-}
-
-/* video */
+.project-page img,
 .project-page video{
   width:100%;
   height:auto;
@@ -148,22 +141,12 @@ body{
   padding:0;
 }
 
-/* safety iframe flow */
-.project-page iframe{
-  display:block;
-}
-
-/* =========================
-   ABOUT + CONTACT
-========================= */
-
+/* ABOUT PAGE */
 .single-page{
   margin:0;
   padding:0;
-
   width:100vw;
   height:100vh;
-
   overflow:hidden;
   background:white;
 }
@@ -187,11 +170,11 @@ body{
   }
 
   .work-title{
-    font-size:24px;
+    font-size:22px;
   }
 
   .project{
-    font-size:18px;
+    font-size:16px;
   }
 
   .name{
