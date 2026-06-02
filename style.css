@@ -1,6 +1,5 @@
-
 /* =========================
-   FONT (CORRETTI CON NOMI REALI)
+   FONTS
 ========================= */
 
 @font-face {
@@ -25,124 +24,138 @@
 
 @font-face {
   font-family: "Oi";
-  src: url("./fonts/oi-regular.ttf") format("truetype");
+  src: url("./fonts/oi-Regular.ttf") format("truetype");
 }
 
 /* =========================
-   BASE
+   HOME
 ========================= */
 
 body {
   margin: 0;
   padding: 0;
-  background: #FFEAF1;
-  color: #FF4FB8;
   overflow: hidden;
+  background: #FFEAF1;
 }
 
-/* =========================
-   COVER
-========================= */
+/* COVER */
 
 .bg {
   position: fixed;
   inset: 0;
+
   background-image: url("./images/cover.png");
   background-size: cover;
   background-position: center;
+
   z-index: 0;
-  pointer-events: none;
 }
 
-/* =========================
-   WORK (ALTO SINISTRA)
-========================= */
+/* WORK */
 
 .work {
   position: absolute;
   top: 40px;
   left: 40px;
 
+  z-index: 10;
+
   display: flex;
   flex-direction: column;
-  gap: 4px;
-
-  z-index: 5;
 }
 
 .work-title {
   font-family: "New Spirit Bold";
   font-size: 22px;
-  margin-bottom: 6px;
+  color: #FF4FB8;
+
+  margin-bottom: 10px;
 }
 
 .project {
   font-family: "New Spirit";
-  font-size: 16px;
-  text-decoration: none;
+  font-size: 18px;
+
   color: #FF4FB8;
-  line-height: 1.05;
-  letter-spacing: 0.4px;
+  text-decoration: none;
+
+  line-height: 1.1;
 }
 
 .project:hover {
   opacity: 0.6;
-  transform: translateX(5px);
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT + CONTACT */
 
-.about-link {
+.side-links {
   position: absolute;
   top: 40px;
   right: 40px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  z-index: 10;
+}
+
+.menu-link {
   font-family: "New Spirit";
-  font-size: 16px;
+  font-size: 18px;
+
+  color: #FF4FB8;
   text-decoration: none;
+}
+
+.menu-link:hover {
+  opacity: 0.6;
+}
+
+/* NAME */
+
+.name-bottom {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+
+  font-family: "Oi";
+  font-size: 90px;
+  line-height: 0.8;
+
   color: #FF4FB8;
 
   z-index: 10;
 }
 
-.about-link:hover {
-  opacity: 0.6;
-}
-
 /* =========================
-   NAME (OI FONT)
-========================= */
-
-.name-bottom {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  z-index: 5;
-}
-
-.oi-name {
-  font-family: "Oi";
-  font-size: 90px;
-  line-height: 0.85;
-}
-
-/* =========================
-   ABOUT PAGE + PROJECT PAGES
+   PROJECT PAGES
 ========================= */
 
 .project-page-body {
   margin: 0;
-  padding: 0;
   background: white;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .project-page img {
   width: 100%;
-  height: auto;
   display: block;
   margin: 0;
+}
+
+/* =========================
+   ABOUT / CONTACT
+========================= */
+
+.single-image-page {
+  margin: 0;
+  overflow: hidden;
+}
+
+.single-image {
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: contain;
+  display: block;
 }
