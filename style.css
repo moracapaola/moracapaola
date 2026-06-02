@@ -55,7 +55,7 @@ body{
 
 .work{
   position:absolute;
-  top:40px;
+  top:20px;
   left:40px;
   z-index:10;
 }
@@ -109,7 +109,7 @@ body{
 
 .center-link{
   position:absolute;
-  top:40px;
+  top:20px;
   left:50%;
   transform:translateX(-50%);
 
@@ -134,7 +134,7 @@ body{
 
 .about-link{
   position:absolute;
-  top:40px;
+  top:20px;
   right:40px;
 
   font-family:"New Spirit Bold";
