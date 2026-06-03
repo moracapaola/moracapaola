@@ -47,7 +47,7 @@ body{
 }
 
 /* =========================
-   GLOBAL TYPO FORCE (FIX BOLD BUG)
+   GLOBAL TYPO FORCE (FIX BOLD)
 ========================= */
 
 .work-title,
@@ -121,7 +121,7 @@ html{
   flex-direction:column;
 }
 
-/* spacing FIX (leading migliore) */
+/* 🔥 FIX: WORK → PROGETTI (più vicino ma non troppo) */
 .work-title{
   font-size:1.2rem;
   color:var(--pink);
@@ -134,12 +134,13 @@ html{
   color:var(--hover);
 }
 
+/* 🔥 FIX: PROGETTI più compatti */
 .submenu{
   display:none;
   flex-direction:column;
-  gap:4px;
+  gap:3px;        /* più denso */
   margin-left:2px;
-  margin-top:6px;
+  margin-top:3px; /* meno distanza da WORK */
 }
 
 .menu-group:hover .submenu{
@@ -256,7 +257,7 @@ html{
   transition:color .2s ease, transform .15s ease;
 }
 
-/* HOVER CLEAN (NO WHITE) */
+/* HOVER CLEAN */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
   color:var(--hover);
