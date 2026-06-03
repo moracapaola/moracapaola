@@ -42,7 +42,7 @@
   <img src="images/clay-to-cloud/10.png" alt="">
   <img src="images/clay-to-cloud/11.png" alt="">
 
-  <!-- EMBED CON SOUND HINT -->
+  <!-- EMBED RESPONSIVE + SOUND TOGGLE -->
   <div class="external-iframe">
 
     <iframe
@@ -50,10 +50,9 @@
       allowfullscreen>
     </iframe>
 
-    <!-- SOUND INDICATOR -->
-    <div class="sound-hint">
-      🔊 sound on
-    </div>
+    <button class="sound-toggle" aria-label="Toggle sound">
+      🔊 ON
+    </button>
 
   </div>
 
@@ -73,6 +72,21 @@
   </div>
 
 </nav>
+
+<!-- JS TOGGLE -->
+<script>
+const btn = document.querySelector(".sound-toggle");
+
+btn.addEventListener("click", () => {
+  btn.classList.toggle("off");
+
+  if (btn.classList.contains("off")) {
+    btn.textContent = "🔇 OFF";
+  } else {
+    btn.textContent = "🔊 ON";
+  }
+});
+</script>
 
 </body>
 </html>
