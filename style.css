@@ -47,19 +47,18 @@ body{
 }
 
 /* =========================
-   GLOBAL TYPO FIX (BOLD STABLE)
+   GLOBAL TYPO FIX (ONLY TRUE BOLD ELEMENTS)
 ========================= */
 
 .work-title,
-.project,
 .center-link,
 .about-link,
 .project-nav-top a,
 .project-nav-bottom a,
 .project-counter,
 .label{
-  font-family:"New Spirit Bold" !important;
-  font-weight:700 !important;
+  font-family:"New Spirit Bold";
+  font-weight:700;
 }
 
 /* =========================
@@ -108,7 +107,7 @@ html{
 }
 
 /* =========================
-   MENU LEFT (WORK)
+   MENU LEFT
 ========================= */
 
 .work{
@@ -123,11 +122,10 @@ html{
   flex-direction:column;
 }
 
-/* WORK → LISTA (FIX DEFINITIVO SPAZIATURA) */
 .work-title{
   font-size:1.2rem;
   color:var(--pink);
-  margin-bottom:2px; /* 🔥 quasi attaccato ma leggibile */
+  margin-bottom:2px;
   cursor:pointer;
   transition:color .2s ease;
 }
@@ -136,20 +134,22 @@ html{
   color:var(--hover);
 }
 
-/* LISTA PROGETTI */
 .submenu{
   display:none;
   flex-direction:column;
-  gap:3px;        /* compatto */
+  gap:3px;
   margin-left:2px;
-  margin-top:0px; /* 🔥 niente aria inutile sopra */
+  margin-top:0px;
 }
 
 .menu-group:hover .submenu{
   display:flex;
 }
 
+/* 🔥 PROGETTI = LIGHT WEIGHT */
 .project{
+  font-family:"New Spirit";
+  font-weight:400;
   font-size:1rem;
   color:var(--pink);
   text-decoration:none;
@@ -205,13 +205,18 @@ html{
   gap:10px;
 }
 
+/* 🔥 LABELS BOLD */
 .label{
   font-size:1rem;
   color:var(--pink);
+  font-weight:700;
+  font-family:"New Spirit Bold";
 }
 
+/* 🔥 VALUES LIGHT */
 .value{
   font-family:"New Spirit";
+  font-weight:400;
   color:var(--pink);
   text-decoration:none;
   transition:color .2s ease;
@@ -250,16 +255,17 @@ html{
   min-height:60px;
 }
 
-/* LINKS */
+/* LINKS (BOLD NAV OK) */
 .project-nav-top a,
 .project-nav-bottom a{
   font-size:18px;
   color:var(--pink);
   text-decoration:none;
+  font-family:"New Spirit Bold";
+  font-weight:700;
   transition:color .2s ease, transform .15s ease;
 }
 
-/* HOVER CLEAN */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
   color:var(--hover);
@@ -270,6 +276,8 @@ html{
 .project-counter{
   font-size:18px;
   color:var(--pink);
+  font-family:"New Spirit Bold";
+  font-weight:700;
 }
 
 /* =========================
