@@ -47,21 +47,6 @@ body{
 }
 
 /* =========================
-   GLOBAL TYPO FIX (IMPORTANT)
-========================= */
-
-.project,
-.value,
-a.project,
-a.value{
-  font-family:"New Spirit" !important;
-  font-weight:400 !important;
-  font-synthesis:none !important;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-
-/* =========================
    TYPO SCALE
 ========================= */
 
@@ -78,7 +63,7 @@ html{
 }
 
 /* =========================
-   HOME
+   HOME BACKGROUND
 ========================= */
 
 .home{
@@ -148,14 +133,22 @@ html{
 }
 
 /* =========================
-   PROJECTS + CONTACTS (IDENTICAL STYLE)
+   🔥 FIX CORE (PROGETTI = CONTACT = IDENTICI)
 ========================= */
 
 .project,
-.value{
-  font-family:"New Spirit";
-  font-weight:400;
-  font-size:1rem;
+.value,
+.footer a{
+  font-family:"New Spirit" !important;
+  font-weight:400 !important;
+  font-style:normal !important;
+  font-synthesis:none !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+
+  -webkit-font-smoothing:antialiased !important;
+  -moz-osx-font-smoothing:grayscale !important;
+
   color:var(--pink);
   text-decoration:none;
   transition:color .2s ease;
@@ -163,7 +156,8 @@ html{
 }
 
 .project:hover,
-.value:hover{
+.value:hover,
+.footer a:hover{
   color:var(--hover);
 }
 
@@ -217,7 +211,6 @@ html{
 .label{
   font-family:"New Spirit Bold";
   font-weight:700;
-  font-size:1rem;
   color:var(--pink);
 }
 
