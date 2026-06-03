@@ -19,26 +19,36 @@ body{
 }
 
 /* =========================
-   FONTS
+   FONTS (FIX SAFARI / MOBILE)
 ========================= */
 
+/* usa SOLO woff2/woff (non otf) */
 @font-face{
   font-family:"New Spirit";
-  src:url("./fonts/new-spirit.otf") format("opentype");
+  src:url("./fonts/newspirit.woff2") format("woff2"),
+      url("./fonts/newspirit.woff") format("woff");
+  font-weight:400;
+  font-style:normal;
 }
 
 @font-face{
-  font-family:"New Spirit Bold";
-  src:url("./fonts/new-spirit-bold.otf") format("opentype");
+  font-family:"New Spirit";
+  src:url("./fonts/newspiritbold.woff2") format("woff2"),
+      url("./fonts/newspiritbold.woff") format("woff");
+  font-weight:700;
+  font-style:normal;
 }
 
 @font-face{
   font-family:"HC Gleam";
-  src:url("./fonts/hc-gleam.otf") format("opentype");
+  src:url("./fonts/hcgleam.woff2") format("woff2"),
+      url("./fonts/hcgleam.woff") format("woff");
+  font-weight:400;
+  font-style:normal;
 }
 
 /* =========================
-   RESPONSIVE TYPO SYSTEM (FIX MOBILE)
+   TYPO RESPONSIVE BASE
 ========================= */
 
 html{
@@ -70,17 +80,13 @@ html{
   z-index:0;
 }
 
-/* =========================
-   COVER TEXT OVERLAY
-========================= */
-
+/* COVER TEXT */
 .cover-text{
   position:fixed;
   top:50%;
   left:40px;
   transform:translateY(-60%);
   width:min(600px, 40vw);
-  height:auto;
   z-index:2;
   pointer-events:none;
 }
@@ -102,12 +108,11 @@ html{
 }
 
 .work-title{
-  font-family:"New Spirit Bold";
-  font-size:1.2rem;
+  font-family:"New Spirit";
   font-weight:700;
+  font-size:1.2rem;
   color:#FF4FB8;
   cursor:pointer;
-  transition:color .2s ease;
 }
 
 .work-title:hover{
@@ -127,12 +132,10 @@ html{
 
 .project{
   font-family:"New Spirit";
+  font-weight:400;
   font-size:1rem;
-  font-weight:600;
-  line-height:1.05;
   color:#FF4FB8;
   text-decoration:none;
-  transition:color .2s ease;
 }
 
 .project:hover{
@@ -140,19 +143,18 @@ html{
 }
 
 /* =========================
-   OPEN TO WORK / ABOUT
+   TOP LINKS
 ========================= */
 
 .center-link,
 .about-link{
   position:absolute;
   top:20px;
-  font-family:"New Spirit Bold";
-  font-size:1.2rem;
+  font-family:"New Spirit";
   font-weight:700;
+  font-size:1.2rem;
   color:#FF4FB8;
   text-decoration:none;
-  transition:color .2s ease;
   z-index:10;
 }
 
@@ -183,11 +185,9 @@ html{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
-  align-items:flex-start;
-
-  padding:0 40px;
   gap:10px;
 
+  padding:0 40px;
   z-index:10;
 }
 
@@ -195,25 +195,23 @@ html{
 .footer-center,
 .footer-right{
   display:flex;
-  align-items:center;
   gap:6px;
+  align-items:center;
 }
 
 .label{
-  font-family:"New Spirit Bold";
-  font-size:1rem;
+  font-family:"New Spirit";
   font-weight:700;
-  text-transform:uppercase;
+  font-size:1rem;
   color:#FF4FB8;
 }
 
 .value{
   font-family:"New Spirit";
-  font-size:1.15rem; /* 🔥 più leggibile su mobile */
   font-weight:400;
+  font-size:1.15rem;
   color:#FF4FB8;
   text-decoration:none;
-  transition:color .2s ease;
 }
 
 .value:hover{
@@ -221,7 +219,7 @@ html{
 }
 
 /* =========================
-   PROJECT BASE
+   PROJECT PAGE BASE
 ========================= */
 
 .project-page-body{
@@ -232,38 +230,28 @@ html{
 
 .project-page{
   width:100%;
-  margin:0;
-  padding:0;
+  max-width:100%;
   overflow-x:hidden;
 }
 
-/* =========================
-   MEDIA
-========================= */
-
+/* media safe */
 .project-page img,
 .project-page video{
   width:100%;
   height:auto;
   display:block;
-  max-width:100%;
 }
 
 /* =========================
-   IFRAME (CLAY TO CLOUD FIX DEFINITIVO)
+   CLAY TO CLOUD FIX (SAFARI + MOBILE)
 ========================= */
 
 .external-iframe{
   width:100%;
   height:100vh;
+  height:100dvh;
   border:0;
   display:block;
-}
-
-@media (max-width:768px){
-  .external-iframe{
-    height:100dvh;
-  }
 }
 
 iframe{
@@ -271,61 +259,32 @@ iframe{
 }
 
 /* =========================
-   BACK BUTTON
-========================= */
-
-.top{
-  position:sticky;
-  top:0;
-  padding:20px 40px;
-  z-index:10;
-}
-
-.top a{
-  font-family:"New Spirit Bold";
-  text-decoration:none;
-  color:#FF4FB8;
-  font-size:1rem;
-}
-
-.top a:hover{
-  color:#FFEAF1;
-}
-
-/* =========================
-   ABOUT PAGE
+   ABOUT PAGE (FIX SERIO)
 ========================= */
 
 .single-page{
-  margin:0;
-  padding:0;
-
   width:100%;
   min-height:100vh;
-
-  background:white;
 
   display:flex;
   justify-content:center;
   align-items:center;
 
   overflow:hidden;
+  background:white;
 }
 
 .single-page img{
-  display:block;
-
   max-width:100%;
   max-height:100vh;
 
   width:auto;
   height:auto;
-
   object-fit:contain;
 }
 
 /* =========================
-   PROJECT NAV (UNIFIED SYSTEM)
+   PROJECT NAV (TOP + BOTTOM)
 ========================= */
 
 .project-nav-top,
@@ -335,45 +294,33 @@ iframe{
   align-items:center;
 
   padding:20px 40px;
-
-  background:#001BFF; /* nuovo blu */
-  position:relative;
-  z-index:20;
-}
-
-/* stessa “presenza” visiva */
-.project-nav-top,
-.project-nav-bottom{
   min-height:60px;
+
+  background:#001BFF;
 }
 
-/* link style coerente con WORK / ABOUT */
 .project-nav-top a,
 .project-nav-bottom a{
-  font-family:"New Spirit Bold";
-  font-size:18px;
+  font-family:"New Spirit";
   font-weight:700;
-
-  color:#FF4FB8; /* stesso rosa del sito */
+  font-size:18px;
+  color:#FF4FB8;
   text-decoration:none;
-
-  transition:opacity .2s ease;
 }
 
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
-  opacity:.7;
+  color:#FFEAF1;
 }
 
-/* counter centrale */
 .project-counter{
-  font-family:"New Spirit Bold";
-  font-size:18px;
+  font-family:"New Spirit";
   font-weight:700;
+  font-size:18px;
   color:#FF4FB8;
 }
 
-/* MOBILE */
+/* MOBILE NAV */
 @media (max-width:768px){
 
   .project-nav-top,
@@ -389,14 +336,14 @@ iframe{
 }
 
 /* =========================
-   MOBILE FINISHING
+   MOBILE FIX FINAL
 ========================= */
 
 @media (max-width:768px){
 
   .work{
-    top:20px;
     left:20px;
+    top:20px;
   }
 
   .center-link,
@@ -414,20 +361,4 @@ iframe{
     align-items:flex-start;
     padding:0 20px 20px;
   }
-}
-
-/* =========================
-   PROJECT NAV HOVER FIX
-========================= */
-
-.project-nav-top a,
-.project-nav-bottom a{
-  color:#FF4FB8;
-  text-decoration:none;
-  transition:color .2s ease;
-}
-
-.project-nav-top a:hover,
-.project-nav-bottom a:hover{
-  color:#FFEAF1;
 }
