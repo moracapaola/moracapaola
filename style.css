@@ -325,6 +325,63 @@ iframe{
 }
 
 /* =========================
+   PROJECT NAVIGATION
+========================= */
+
+.project-nav-top,
+.project-nav-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 40px;
+
+  font-family:"New Spirit Bold";
+}
+
+.project-nav-bottom{
+  padding:40px;
+}
+
+.project-nav-left,
+.project-nav-center,
+.project-nav-right{
+  color:#FF4FB8;
+}
+
+.project-nav-left a,
+.project-nav-right a,
+.project-nav-center a{
+  color:#FF4FB8;
+  text-decoration:none;
+  opacity:.7;
+  transition:.2s ease;
+}
+
+.project-nav-left a:hover,
+.project-nav-right a:hover,
+.project-nav-center a:hover{
+  opacity:1;
+}
+
+.project-counter{
+  color:#FF4FB8;
+  opacity:1;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .project-nav-top,
+  .project-nav-bottom{
+    padding:20px;
+    font-size:14px;
+  }
+
+}
+
+/* =========================
    MOBILE FINISHING
 ========================= */
 
