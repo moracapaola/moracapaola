@@ -24,7 +24,7 @@ body{
 }
 
 /* =========================
-   FONT (WEB SAFE FIX)
+   FONTS
 ========================= */
 
 @font-face{
@@ -46,7 +46,7 @@ body{
 }
 
 /* =========================
-   TYPO RESPONSIVE
+   TYPO
 ========================= */
 
 html{
@@ -65,16 +65,12 @@ html{
    HOME
 ========================= */
 
-.home{
-  overflow:hidden;
-}
+.home{ overflow:hidden; }
 
 .bg{
   position:fixed;
   inset:0;
-  background-image:url("./images/cover.png");
-  background-size:cover;
-  background-position:center;
+  background:url("./images/cover.png") center/cover no-repeat;
   z-index:0;
 }
 
@@ -111,13 +107,13 @@ html{
 .work-title{
   font-family:"New Spirit Bold";
   font-size:1.2rem;
-  color: var(--pink);
+  color:var(--pink);
   cursor:pointer;
   transition:color .2s ease;
 }
 
 .work-title:hover{
-  color:#FFEAF1;
+  color:var(--blue);
 }
 
 .submenu{
@@ -133,13 +129,13 @@ html{
 .project{
   font-family:"New Spirit";
   font-size:1rem;
-  color: var(--pink);
+  color:var(--pink);
   text-decoration:none;
   transition:color .2s ease;
 }
 
 .project:hover{
-  color:#FFEAF1;
+  color:var(--blue);
 }
 
 /* =========================
@@ -152,7 +148,7 @@ html{
   top:20px;
   font-family:"New Spirit Bold";
   font-size:1.2rem;
-  color: var(--pink);
+  color:var(--pink);
   text-decoration:none;
   z-index:10;
   transition:color .2s ease;
@@ -169,7 +165,7 @@ html{
 
 .center-link:hover,
 .about-link:hover{
-  color:#FFEAF1;
+  color:var(--blue);
 }
 
 /* =========================
@@ -182,33 +178,29 @@ html{
   left:0;
   width:100%;
   display:flex;
-  flex-wrap:wrap;
   justify-content:space-between;
+  flex-wrap:wrap;
   padding:0 40px;
   gap:10px;
 }
 
 .label{
   font-family:"New Spirit Bold";
-  font-size:1rem;
-  color: var(--pink);
+  color:var(--pink);
 }
 
 .value{
   font-family:"New Spirit";
-  font-size:1.15rem;
-  color: var(--pink);
+  color:var(--pink);
   text-decoration:none;
 }
 
-/* ❗ HOVER SENZA TRASPARENZA */
 .value:hover{
-  color:#FFEAF1;
-  opacity:1;
+  color:var(--blue);
 }
 
 /* =========================
-   PROJECT PAGE BASE
+   PROJECT PAGE
 ========================= */
 
 .project-page-body{
@@ -216,32 +208,14 @@ html{
   background:white;
 }
 
-.project-page{
-  width:100%;
-  overflow-x:hidden;
-}
-
 .project-page img,
 .project-page video{
   width:100%;
-  height:auto;
   display:block;
 }
 
 /* =========================
-   CLAY TO CLOUD IFRAME FIX
-========================= */
-
-.external-iframe{
-  width:100%;
-  height:100vh;
-  height:100svh;
-  border:0;
-  display:block;
-}
-
-/* =========================
-   PROJECT NAV (TOP + BOTTOM)
+   NAV (TOP + BOTTOM)
 ========================= */
 
 .project-nav-top,
@@ -250,85 +224,47 @@ html{
   justify-content:space-between;
   align-items:center;
   padding:20px 40px;
-
-  background:#001BFF;
+  background:var(--blue);
   min-height:60px;
+  position:relative;
+  z-index:999;
 }
 
+/* LINKS */
 .project-nav-top a,
 .project-nav-bottom a{
   font-family:"New Spirit Bold";
   font-size:18px;
-  color: var(--pink);
-
+  color:var(--pink);
   text-decoration:none;
 
-  /* ❗ FIX: niente trasparenza */
   opacity:1;
   transition:color .2s ease;
 }
 
-/* ❗ hover SOLO colore */
+/* ❗ NO TRANSPARENCY */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
-  color:#FFEAF1;
+  color:white;
   opacity:1;
 }
 
+/* COUNTER */
 .project-counter{
   font-family:"New Spirit Bold";
   font-size:18px;
-  color: var(--pink);
-}
-
-.project-counter a{
-  font-family:"New Spirit Bold";
-  font-size:18px;
-  color: var(--pink);
-  text-decoration:none;
-  transition:color .2s ease;
-}
-
-.project-counter a:hover{
-  color:#FFEAF1;
+  color:var(--pink);
 }
 
 /* =========================
-   ABOUT PAGE FIX (NO MORE HUGE IMAGE)
-========================= */
-
-.single-page{
-  margin:0;
-  width:100%;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
-  background:white;
-}
-
-.single-page img{
-  max-width:100%;
-  max-height:100vh;
-  width:auto;
-  height:auto;
-  object-fit:contain;
-}
-
-/* =========================
-   MOBILE FIX
+   MOBILE
 ========================= */
 
 @media (max-width:768px){
 
-  .work{
-    left:20px;
-  }
+  .work{ left:20px; }
 
-  .about-link{
-    right:20px;
-  }
+  .about-link{ right:20px; }
 
   .footer{
     flex-direction:column;
@@ -345,36 +281,4 @@ html{
   .project-counter{
     font-size:14px;
   }
-}
-
-/* =========================
-   NAV CLICK FIX
-========================= */
-
-.project-nav-top,
-.project-nav-bottom{
-  position:relative;
-  z-index:999;
-}
-
-.project-nav-top a,
-.project-nav-bottom a{
-  position:relative;
-  z-index:999;
-  display:inline-block;
-  pointer-events:auto;
-}
-
-/* =========================
-   FORCE BOLD TYPO
-========================= */
-
-.work-title,
-.center-link,
-.about-link,
-.project-nav-top a,
-.project-nav-bottom a,
-.project-counter{
-  font-family:"New Spirit Bold";
-  font-weight:700;
 }
