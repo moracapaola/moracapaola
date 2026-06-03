@@ -44,7 +44,7 @@
   <img src="images/proof/7.png" alt="">
   <img src="images/proof/8.png" alt="">
 
-  <!-- VIDEO 2 -->
+  <!-- VIDEO 2 (WEBM FIRST) -->
   <div class="video-wrapper">
     <video playsinline preload="metadata" controls>
       <source src="images/proof/video.webm" type="video/webm">
@@ -76,14 +76,20 @@
 
 </nav>
 
-<!-- PLAY BUTTON SCRIPT -->
+<!-- VIDEO PLAY SCRIPT -->
 <script>
 document.querySelectorAll(".video-wrapper").forEach(wrapper => {
   const video = wrapper.querySelector("video");
   const btn = wrapper.querySelector(".video-play");
 
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
     video.play();
+  });
+
+  video.addEventListener("click", () => {
+    if (video.paused) video.play();
+    else video.pause();
   });
 
   video.addEventListener("play", () => {
