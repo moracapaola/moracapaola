@@ -415,3 +415,19 @@ iframe{
     padding:0 20px 20px;
   }
 }
+
+/* =========================
+   PROJECT NAV HOVER FIX
+========================= */
+
+.project-nav-top a,
+.project-nav-bottom a{
+  color:#FF4FB8;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+
+.project-nav-top a:hover,
+.project-nav-bottom a:hover{
+  color:#FFEAF1;
+}
