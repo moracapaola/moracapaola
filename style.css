@@ -19,36 +19,25 @@ body{
 }
 
 /* =========================
-   FONTS (FIX SAFARI / MOBILE)
+   FONT (WEB SAFE FIX)
 ========================= */
 
-/* usa SOLO woff2/woff (non otf) */
 @font-face{
   font-family:"New Spirit";
   src:url("./fonts/newspirit.woff2") format("woff2"),
       url("./fonts/newspirit.woff") format("woff");
-  font-weight:400;
-  font-style:normal;
+  font-display:swap;
 }
 
 @font-face{
-  font-family:"New Spirit";
+  font-family:"New Spirit Bold";
   src:url("./fonts/newspiritbold.woff2") format("woff2"),
       url("./fonts/newspiritbold.woff") format("woff");
-  font-weight:700;
-  font-style:normal;
-}
-
-@font-face{
-  font-family:"HC Gleam";
-  src:url("./fonts/hcgleam.woff2") format("woff2"),
-      url("./fonts/hcgleam.woff") format("woff");
-  font-weight:400;
-  font-style:normal;
+  font-display:swap;
 }
 
 /* =========================
-   TYPO RESPONSIVE BASE
+   TYPO RESPONSIVE
 ========================= */
 
 html{
@@ -64,7 +53,7 @@ html{
 }
 
 /* =========================
-   HOME COVER
+   HOME
 ========================= */
 
 .home{
@@ -80,7 +69,10 @@ html{
   z-index:0;
 }
 
-/* COVER TEXT */
+/* =========================
+   COVER TEXT
+========================= */
+
 .cover-text{
   position:fixed;
   top:50%;
@@ -92,7 +84,7 @@ html{
 }
 
 /* =========================
-   WORK
+   MENU LEFT
 ========================= */
 
 .work{
@@ -108,11 +100,11 @@ html{
 }
 
 .work-title{
-  font-family:"New Spirit";
-  font-weight:700;
+  font-family:"New Spirit Bold";
   font-size:1.2rem;
   color:#FF4FB8;
   cursor:pointer;
+  transition:color .2s ease;
 }
 
 .work-title:hover{
@@ -122,8 +114,7 @@ html{
 .submenu{
   display:none;
   flex-direction:column;
-  gap:3px;
-  margin-top:6px;
+  gap:4px;
 }
 
 .menu-group:hover .submenu{
@@ -132,10 +123,10 @@ html{
 
 .project{
   font-family:"New Spirit";
-  font-weight:400;
   font-size:1rem;
   color:#FF4FB8;
   text-decoration:none;
+  transition:color .2s ease;
 }
 
 .project:hover{
@@ -150,12 +141,12 @@ html{
 .about-link{
   position:absolute;
   top:20px;
-  font-family:"New Spirit";
-  font-weight:700;
+  font-family:"New Spirit Bold";
   font-size:1.2rem;
   color:#FF4FB8;
   text-decoration:none;
   z-index:10;
+  transition:color .2s ease;
 }
 
 .center-link{
@@ -173,7 +164,7 @@ html{
 }
 
 /* =========================
-   FOOTER
+   FOOTER HOME
 ========================= */
 
 .footer{
@@ -181,41 +172,30 @@ html{
   bottom:20px;
   left:0;
   width:100%;
-
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
-  gap:10px;
-
   padding:0 40px;
-  z-index:10;
-}
-
-.footer-left,
-.footer-center,
-.footer-right{
-  display:flex;
-  gap:6px;
-  align-items:center;
+  gap:10px;
 }
 
 .label{
-  font-family:"New Spirit";
-  font-weight:700;
+  font-family:"New Spirit Bold";
   font-size:1rem;
   color:#FF4FB8;
 }
 
 .value{
   font-family:"New Spirit";
-  font-weight:400;
   font-size:1.15rem;
   color:#FF4FB8;
   text-decoration:none;
 }
 
+/* ❗ HOVER SENZA TRASPARENZA */
 .value:hover{
   color:#FFEAF1;
+  opacity:1;
 }
 
 /* =========================
@@ -224,17 +204,14 @@ html{
 
 .project-page-body{
   margin:0;
-  padding:0;
   background:white;
 }
 
 .project-page{
   width:100%;
-  max-width:100%;
   overflow-x:hidden;
 }
 
-/* media safe */
 .project-page img,
 .project-page video{
   width:100%;
@@ -243,44 +220,15 @@ html{
 }
 
 /* =========================
-   CLAY TO CLOUD FIX (SAFARI + MOBILE)
+   CLAY TO CLOUD IFRAME FIX
 ========================= */
 
 .external-iframe{
   width:100%;
   height:100vh;
-  height:100dvh;
+  height:100svh;
   border:0;
   display:block;
-}
-
-iframe{
-  max-width:100%;
-}
-
-/* =========================
-   ABOUT PAGE (FIX SERIO)
-========================= */
-
-.single-page{
-  width:100%;
-  min-height:100vh;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  overflow:hidden;
-  background:white;
-}
-
-.single-page img{
-  max-width:100%;
-  max-height:100vh;
-
-  width:auto;
-  height:auto;
-  object-fit:contain;
 }
 
 /* =========================
@@ -292,36 +240,79 @@ iframe{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   padding:20px 40px;
-  min-height:60px;
 
   background:#001BFF;
+  min-height:60px;
 }
 
 .project-nav-top a,
 .project-nav-bottom a{
-  font-family:"New Spirit";
-  font-weight:700;
+  font-family:"New Spirit Bold";
   font-size:18px;
   color:#FF4FB8;
+
   text-decoration:none;
+
+  /* ❗ FIX: niente trasparenza */
+  opacity:1;
+  transition:color .2s ease;
 }
 
+/* ❗ hover SOLO colore */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
   color:#FFEAF1;
+  opacity:1;
 }
 
 .project-counter{
-  font-family:"New Spirit";
-  font-weight:700;
+  font-family:"New Spirit Bold";
   font-size:18px;
   color:#FF4FB8;
 }
 
-/* MOBILE NAV */
+/* =========================
+   ABOUT PAGE FIX (NO MORE HUGE IMAGE)
+========================= */
+
+.single-page{
+  margin:0;
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  background:white;
+}
+
+.single-page img{
+  max-width:100%;
+  max-height:100vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+
 @media (max-width:768px){
+
+  .work{
+    left:20px;
+  }
+
+  .about-link{
+    right:20px;
+  }
+
+  .footer{
+    flex-direction:column;
+    padding:0 20px 20px;
+  }
 
   .project-nav-top,
   .project-nav-bottom{
@@ -332,33 +323,5 @@ iframe{
   .project-nav-bottom a,
   .project-counter{
     font-size:14px;
-  }
-}
-
-/* =========================
-   MOBILE FIX FINAL
-========================= */
-
-@media (max-width:768px){
-
-  .work{
-    left:20px;
-    top:20px;
-  }
-
-  .center-link,
-  .about-link{
-    top:20px;
-    font-size:1rem;
-  }
-
-  .about-link{
-    right:20px;
-  }
-
-  .footer{
-    flex-direction:column;
-    align-items:flex-start;
-    padding:0 20px 20px;
   }
 }
