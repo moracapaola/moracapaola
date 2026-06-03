@@ -26,6 +26,8 @@ body{
   font-family:"New Spirit";
   src:url("./fonts/newspirit.woff2") format("woff2"),
       url("./fonts/newspirit.woff") format("woff");
+  font-weight:400;
+  font-style:normal;
   font-display:swap;
 }
 
@@ -356,4 +358,18 @@ html{
   z-index:999;
   display:inline-block;
   pointer-events:auto;
+}
+
+/* =========================
+   FORCE BOLD TYPO
+========================= */
+
+.work-title,
+.center-link,
+.about-link,
+.project-nav-top a,
+.project-nav-bottom a,
+.project-counter{
+  font-family:"New Spirit Bold";
+  font-weight:700;
 }
