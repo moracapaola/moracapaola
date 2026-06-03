@@ -1,7 +1,9 @@
 :root{
   --pink:#FFD1EA;
   --blue:#001BFF;
-  --white-hover:#FFEAF1;
+
+  /* hover leggero (non bianco, più elegante e leggibile) */
+  --hover:#FF7AC8;
 }
 
 /* =========================
@@ -66,9 +68,7 @@ html{
    HOME
 ========================= */
 
-.home{
-  overflow:hidden;
-}
+.home{ overflow:hidden; }
 
 .bg{
   position:fixed;
@@ -92,7 +92,7 @@ html{
 }
 
 /* =========================
-   MENU WORK
+   MENU LEFT
 ========================= */
 
 .work{
@@ -116,7 +116,7 @@ html{
 }
 
 .work-title:hover{
-  color:var(--white-hover);
+  color:var(--hover);
 }
 
 .submenu{
@@ -138,7 +138,7 @@ html{
 }
 
 .project:hover{
-  color:var(--white-hover);
+  color:var(--hover);
 }
 
 /* =========================
@@ -168,7 +168,7 @@ html{
 
 .center-link:hover,
 .about-link:hover{
-  color:var(--white-hover);
+  color:var(--hover);
 }
 
 /* =========================
@@ -200,11 +200,11 @@ html{
 }
 
 .value:hover{
-  color:var(--white-hover);
+  color:var(--hover);
 }
 
 /* =========================
-   PROJECT PAGE BASE
+   PROJECT PAGE
 ========================= */
 
 .project-page-body{
@@ -219,7 +219,7 @@ html{
 }
 
 /* =========================
-   NAV TOP + BOTTOM
+   NAV TOP / BOTTOM
 ========================= */
 
 .project-nav-top,
@@ -227,14 +227,10 @@ html{
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   padding:20px 40px;
-  min-height:60px;
 
   background:var(--blue);
-
-  position:relative;
-  z-index:999;
+  min-height:60px;
 }
 
 /* LINKS */
@@ -245,16 +241,14 @@ html{
   color:var(--pink);
   text-decoration:none;
 
-  opacity:1;
-  transition:color .2s ease, transform .2s ease;
+  transition:color .2s ease, transform .15s ease;
 }
 
-/* HOVER COERENTE */
+/* HOVER (NO WHITE, COERENTE) */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
-  color:var(--white-hover);
+  color:var(--hover);
   transform:translateY(-1px);
-  opacity:1;
 }
 
 /* COUNTER */
@@ -265,7 +259,7 @@ html{
 }
 
 /* =========================
-   ABOUT FIX (NO SHIFT)
+   ABOUT FIX
 ========================= */
 
 .single-page{
@@ -275,13 +269,15 @@ html{
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow:hidden;
   background:white;
+  overflow:hidden;
 }
 
 .single-page img{
   max-width:100%;
   max-height:100vh;
+  width:auto;
+  height:auto;
   object-fit:contain;
 }
 
@@ -292,6 +288,7 @@ html{
 @media (max-width:768px){
 
   .work{ left:20px; }
+
   .about-link{ right:20px; }
 
   .footer{
@@ -309,4 +306,16 @@ html{
   .project-counter{
     font-size:14px;
   }
+}
+
+/* =========================
+   CLICK FIX (IMPORTANT)
+========================= */
+
+.project-nav-top a,
+.project-nav-bottom a{
+  position:relative;
+  z-index:10;
+  display:inline-block;
+  pointer-events:auto;
 }
