@@ -209,9 +209,15 @@ html{
 }
 
 .label{
-  font-family:"New Spirit Bold";
-  font-weight:700;
+  font-family:"New Spirit";
+  font-weight:400;
+  font-size:1rem;
+  line-height:1.2;
+
   color:var(--pink);
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 /* =========================
