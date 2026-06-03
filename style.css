@@ -1,8 +1,6 @@
 :root{
   --pink:#FFD1EA;
   --blue:#001BFF;
-
-  /* hover leggero (non bianco, più elegante e leggibile) */
   --hover:#FF7AC8;
 }
 
@@ -46,6 +44,22 @@ body{
   font-weight:700;
   font-style:normal;
   font-display:swap;
+}
+
+/* =========================
+   GLOBAL TYPO FORCE (FIX BOLD BUG)
+========================= */
+
+.work-title,
+.project,
+.center-link,
+.about-link,
+.project-nav-top a,
+.project-nav-bottom a,
+.project-counter,
+.label{
+  font-family:"New Spirit Bold" !important;
+  font-weight:700 !important;
 }
 
 /* =========================
@@ -107,10 +121,11 @@ html{
   flex-direction:column;
 }
 
+/* spacing FIX (leading migliore) */
 .work-title{
-  font-family:"New Spirit Bold";
   font-size:1.2rem;
   color:var(--pink);
+  margin-bottom:10px;
   cursor:pointer;
   transition:color .2s ease;
 }
@@ -122,7 +137,8 @@ html{
 .submenu{
   display:none;
   flex-direction:column;
-  gap:4px;
+  gap:10px;
+  margin-left:2px;
 }
 
 .menu-group:hover .submenu{
@@ -130,7 +146,6 @@ html{
 }
 
 .project{
-  font-family:"New Spirit";
   font-size:1rem;
   color:var(--pink);
   text-decoration:none;
@@ -149,7 +164,6 @@ html{
 .about-link{
   position:absolute;
   top:20px;
-  font-family:"New Spirit Bold";
   font-size:1.2rem;
   color:var(--pink);
   text-decoration:none;
@@ -188,7 +202,7 @@ html{
 }
 
 .label{
-  font-family:"New Spirit Bold";
+  font-size:1rem;
   color:var(--pink);
 }
 
@@ -228,7 +242,6 @@ html{
   justify-content:space-between;
   align-items:center;
   padding:20px 40px;
-
   background:var(--blue);
   min-height:60px;
 }
@@ -236,15 +249,13 @@ html{
 /* LINKS */
 .project-nav-top a,
 .project-nav-bottom a{
-  font-family:"New Spirit Bold";
   font-size:18px;
   color:var(--pink);
   text-decoration:none;
-
   transition:color .2s ease, transform .15s ease;
 }
 
-/* HOVER (NO WHITE, COERENTE) */
+/* HOVER CLEAN (NO WHITE) */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
   color:var(--hover);
@@ -253,7 +264,6 @@ html{
 
 /* COUNTER */
 .project-counter{
-  font-family:"New Spirit Bold";
   font-size:18px;
   color:var(--pink);
 }
@@ -303,7 +313,7 @@ html{
 }
 
 /* =========================
-   CLICK FIX (IMPORTANT)
+   CLICK FIX
 ========================= */
 
 .project-nav-top a,
