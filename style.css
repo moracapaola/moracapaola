@@ -238,15 +238,14 @@ html{
   color:var(--pink);
   text-decoration:none;
 
-  opacity:1;
-  transition:color .2s ease;
+  transition:color .2s ease, transform .2s ease;
 }
 
-/* ❗ NO TRANSPARENCY */
+/* HOVER COERENTE SITO */
 .project-nav-top a:hover,
 .project-nav-bottom a:hover{
-  color:white;
-  opacity:1;
+  color:#FFEAF1;
+  transform:translateY(-1px);
 }
 
 /* COUNTER */
