@@ -293,6 +293,38 @@ iframe{
 }
 
 /* =========================
+   ABOUT PAGE
+========================= */
+
+.single-page{
+  margin:0;
+  padding:0;
+
+  width:100%;
+  min-height:100vh;
+
+  background:white;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+.single-page img{
+  display:block;
+
+  max-width:100%;
+  max-height:100vh;
+
+  width:auto;
+  height:auto;
+
+  object-fit:contain;
+}
+
+/* =========================
    MOBILE FINISHING
 ========================= */
 
