@@ -47,7 +47,7 @@ body{
 }
 
 /* =========================
-   GLOBAL TYPO FORCE (FIX BOLD)
+   GLOBAL TYPO FIX (BOLD STABLE)
 ========================= */
 
 .work-title,
@@ -63,7 +63,7 @@ body{
 }
 
 /* =========================
-   TYPO
+   TYPO SCALE
 ========================= */
 
 html{
@@ -82,7 +82,9 @@ html{
    HOME
 ========================= */
 
-.home{ overflow:hidden; }
+.home{
+  overflow:hidden;
+}
 
 .bg{
   position:fixed;
@@ -106,7 +108,7 @@ html{
 }
 
 /* =========================
-   MENU LEFT
+   MENU LEFT (WORK)
 ========================= */
 
 .work{
@@ -121,11 +123,11 @@ html{
   flex-direction:column;
 }
 
-/* 🔥 FIX: WORK → PROGETTI (più vicino ma non troppo) */
+/* WORK → LISTA (FIX DEFINITIVO SPAZIATURA) */
 .work-title{
   font-size:1.2rem;
   color:var(--pink);
-  margin-bottom:6px;
+  margin-bottom:2px; /* 🔥 quasi attaccato ma leggibile */
   cursor:pointer;
   transition:color .2s ease;
 }
@@ -134,13 +136,13 @@ html{
   color:var(--hover);
 }
 
-/* 🔥 FIX: PROGETTI più compatti */
+/* LISTA PROGETTI */
 .submenu{
   display:none;
   flex-direction:column;
-  gap:3px;        /* più denso */
+  gap:3px;        /* compatto */
   margin-left:2px;
-  margin-top:3px; /* meno distanza da WORK */
+  margin-top:0px; /* 🔥 niente aria inutile sopra */
 }
 
 .menu-group:hover .submenu{
@@ -271,7 +273,7 @@ html{
 }
 
 /* =========================
-   ABOUT FIX
+   ABOUT PAGE FIX
 ========================= */
 
 .single-page{
