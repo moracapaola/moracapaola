@@ -1,3 +1,8 @@
+:root{
+  --pink: #FFD1EA;
+  --blue: #001BFF;
+}
+
 /* =========================
    RESET
 ========================= */
@@ -106,7 +111,7 @@ html{
 .work-title{
   font-family:"New Spirit Bold";
   font-size:1.2rem;
-  color:#FF4FB8;
+  color: var(--pink);
   cursor:pointer;
   transition:color .2s ease;
 }
@@ -128,7 +133,7 @@ html{
 .project{
   font-family:"New Spirit";
   font-size:1rem;
-  color:#FF4FB8;
+  color: var(--pink);
   text-decoration:none;
   transition:color .2s ease;
 }
@@ -147,7 +152,7 @@ html{
   top:20px;
   font-family:"New Spirit Bold";
   font-size:1.2rem;
-  color:#FF4FB8;
+  color: var(--pink);
   text-decoration:none;
   z-index:10;
   transition:color .2s ease;
@@ -186,13 +191,13 @@ html{
 .label{
   font-family:"New Spirit Bold";
   font-size:1rem;
-  color:#FF4FB8;
+  color: var(--pink);
 }
 
 .value{
   font-family:"New Spirit";
   font-size:1.15rem;
-  color:#FF4FB8;
+  color: var(--pink);
   text-decoration:none;
 }
 
@@ -254,7 +259,7 @@ html{
 .project-nav-bottom a{
   font-family:"New Spirit Bold";
   font-size:18px;
-  color:#FF4FB8;
+  color: var(--pink);
 
   text-decoration:none;
 
@@ -273,13 +278,13 @@ html{
 .project-counter{
   font-family:"New Spirit Bold";
   font-size:18px;
-  color:#FF4FB8;
+  color: var(--pink);
 }
 
 .project-counter a{
   font-family:"New Spirit Bold";
   font-size:18px;
-  color:#FF4FB8;
+  color: var(--pink);
   text-decoration:none;
   transition:color .2s ease;
 }
