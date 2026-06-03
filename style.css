@@ -272,6 +272,18 @@ html{
   color:#FF4FB8;
 }
 
+.project-counter a{
+  font-family:"New Spirit Bold";
+  font-size:18px;
+  color:#FF4FB8;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+
+.project-counter a:hover{
+  color:#FFEAF1;
+}
+
 /* =========================
    ABOUT PAGE FIX (NO MORE HUGE IMAGE)
 ========================= */
@@ -324,4 +336,22 @@ html{
   .project-counter{
     font-size:14px;
   }
+}
+
+/* =========================
+   NAV CLICK FIX
+========================= */
+
+.project-nav-top,
+.project-nav-bottom{
+  position:relative;
+  z-index:999;
+}
+
+.project-nav-top a,
+.project-nav-bottom a{
+  position:relative;
+  z-index:999;
+  display:inline-block;
+  pointer-events:auto;
 }
