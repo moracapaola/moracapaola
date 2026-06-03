@@ -25,13 +25,13 @@ body{
 }
 
 /* =========================
-   FONTS
+   FONTS (CORRETTO ORA)
 ========================= */
 
 @font-face{
   font-family:"New Spirit";
-  src:url("./fonts/newspirit.woff2") format("woff2"),
-      url("./fonts/newspirit.woff") format("woff");
+  src:url("./fonts/newspirit-regular.woff2") format("woff2"),
+      url("./fonts/newspirit-regular.woff") format("woff");
   font-weight:400;
   font-style:normal;
   font-display:swap;
@@ -47,22 +47,7 @@ body{
 }
 
 /* =========================
-   GLOBAL BOLD ELEMENTS
-========================= */
-
-.work-title,
-.center-link,
-.about-link,
-.project-nav-top a,
-.project-nav-bottom a,
-.project-counter,
-.label{
-  font-family:"New Spirit Bold";
-  font-weight:700;
-}
-
-/* =========================
-   TYPO SCALE
+   TYPO GLOBAL
 ========================= */
 
 html{
@@ -78,7 +63,7 @@ html{
 }
 
 /* =========================
-   HOME
+   HOME BACKGROUND
 ========================= */
 
 .home{
@@ -107,7 +92,7 @@ html{
 }
 
 /* =========================
-   MENU LEFT
+   MENU WORK
 ========================= */
 
 .work{
@@ -123,6 +108,8 @@ html{
 }
 
 .work-title{
+  font-family:"New Spirit Bold";
+  font-weight:700;
   font-size:1.2rem;
   color:var(--pink);
   margin-bottom:2px;
@@ -138,8 +125,7 @@ html{
   display:none;
   flex-direction:column;
   gap:3px;
-  margin-left:2px;
-  margin-top:0px;
+  margin-top:2px;
 }
 
 .menu-group:hover .submenu{
@@ -147,12 +133,10 @@ html{
 }
 
 /* =========================
-   UNIFIED TYPE SYSTEM
-   (PROGETTI + CONTATTI)
+   PROGETTI (REGULAR PERFETTO)
 ========================= */
 
-.project,
-.value{
+.project{
   font-family:"New Spirit";
   font-weight:400;
   font-size:1rem;
@@ -161,8 +145,7 @@ html{
   transition:color .2s ease;
 }
 
-.project:hover,
-.value:hover{
+.project:hover{
   color:var(--hover);
 }
 
@@ -174,6 +157,8 @@ html{
 .about-link{
   position:absolute;
   top:20px;
+  font-family:"New Spirit Bold";
+  font-weight:700;
   font-size:1.2rem;
   color:var(--pink);
   text-decoration:none;
@@ -196,7 +181,7 @@ html{
 }
 
 /* =========================
-   FOOTER HOME
+   FOOTER HOME (REGULAR + CLEAN)
 ========================= */
 
 .footer{
@@ -212,9 +197,24 @@ html{
 }
 
 .label{
+  font-family:"New Spirit Bold";
+  font-weight:700;
   font-size:1rem;
   color:var(--pink);
-  font-weight:700;
+}
+
+/* 🔥 MOBILE / EMAIL / LINKEDIN = SAME AS PROGETTI */
+.value{
+  font-family:"New Spirit";
+  font-weight:400;
+  font-size:1rem;
+  color:var(--pink);
+  text-decoration:none;
+  transition:color .2s ease;
+}
+
+.value:hover{
+  color:var(--hover);
 }
 
 /* =========================
@@ -246,14 +246,13 @@ html{
   min-height:60px;
 }
 
-/* NAV LINKS */
 .project-nav-top a,
 .project-nav-bottom a{
+  font-family:"New Spirit Bold";
+  font-weight:700;
   font-size:18px;
   color:var(--pink);
   text-decoration:none;
-  font-family:"New Spirit Bold";
-  font-weight:700;
   transition:color .2s ease, transform .15s ease;
 }
 
@@ -263,12 +262,11 @@ html{
   transform:translateY(-1px);
 }
 
-/* COUNTER */
 .project-counter{
-  font-size:18px;
-  color:var(--pink);
   font-family:"New Spirit Bold";
   font-weight:700;
+  font-size:18px;
+  color:var(--pink);
 }
 
 /* =========================
