@@ -29,13 +29,10 @@
   <img src="images/proof/1.png" alt="">
   <img src="images/proof/2.png" alt="">
 
-  <!-- VIDEO 1 -->
-  <div class="video-wrapper">
-    <video playsinline preload="metadata" controls>
-      <source src="images/proof/video.mp4" type="video/mp4">
-    </video>
-    <div class="video-play">▶</div>
-  </div>
+  <!-- VIDEO 1 (DOPO PNG 2) -->
+  <video controls playsinline preload="metadata">
+    <source src="images/proof/video.mp4" type="video/mp4">
+  </video>
 
   <img src="images/proof/3.png" alt="">
   <img src="images/proof/4.png" alt="">
@@ -44,14 +41,14 @@
   <img src="images/proof/7.png" alt="">
   <img src="images/proof/8.png" alt="">
 
-  <!-- VIDEO 2 (WEBM FIRST) -->
-  <div class="video-wrapper">
-    <video playsinline preload="metadata" controls>
-      <source src="images/proof/video.webm" type="video/webm">
-      <source src="images/proof/video.mp4" type="video/mp4">
-    </video>
-    <div class="video-play">▶</div>
-  </div>
+  <!-- VIDEO 2 (DOPO PNG 8) -->
+  <!-- VIDEO 2 (DOPO PNG 8) - WEBM FIRST -->
+  <video controls playsinline preload="metadata">
+    <source src="images/proof/1.webm" type="video/webm">
+    <source src="images/proof/1.mp4" type="video/mp4">
+    <source src="images/proof/video.webm" type="video/webm">
+    <source src="images/proof/video.mp4" type="video/mp4">
+  </video>
 
   <img src="images/proof/9.png" alt="">
   <img src="images/proof/10.png" alt="">
@@ -75,32 +72,6 @@
   </div>
 
 </nav>
-
-<!-- VIDEO PLAY SCRIPT -->
-<script>
-document.querySelectorAll(".video-wrapper").forEach(wrapper => {
-  const video = wrapper.querySelector("video");
-  const btn = wrapper.querySelector(".video-play");
-
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    video.play();
-  });
-
-  video.addEventListener("click", () => {
-    if (video.paused) video.play();
-    else video.pause();
-  });
-
-  video.addEventListener("play", () => {
-    btn.style.opacity = "0";
-  });
-
-  video.addEventListener("pause", () => {
-    btn.style.opacity = "1";
-  });
-});
-</script>
 
 </body>
 </html>
