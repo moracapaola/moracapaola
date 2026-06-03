@@ -25,7 +25,7 @@ body{
 }
 
 /* =========================
-   FONTS (CORRETTO ORA)
+   FONTS
 ========================= */
 
 @font-face{
@@ -47,7 +47,22 @@ body{
 }
 
 /* =========================
-   TYPO GLOBAL
+   GLOBAL TYPO FIX (IMPORTANT)
+========================= */
+
+.project,
+.value,
+a.project,
+a.value{
+  font-family:"New Spirit" !important;
+  font-weight:400 !important;
+  font-synthesis:none !important;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* =========================
+   TYPO SCALE
 ========================= */
 
 html{
@@ -63,7 +78,7 @@ html{
 }
 
 /* =========================
-   HOME BACKGROUND
+   HOME
 ========================= */
 
 .home{
@@ -92,7 +107,7 @@ html{
 }
 
 /* =========================
-   MENU WORK
+   WORK MENU
 ========================= */
 
 .work{
@@ -133,19 +148,22 @@ html{
 }
 
 /* =========================
-   PROGETTI (REGULAR PERFETTO)
+   PROJECTS + CONTACTS (IDENTICAL STYLE)
 ========================= */
 
-.project{
+.project,
+.value{
   font-family:"New Spirit";
   font-weight:400;
   font-size:1rem;
   color:var(--pink);
   text-decoration:none;
   transition:color .2s ease;
+  display:inline-block;
 }
 
-.project:hover{
+.project:hover,
+.value:hover{
   color:var(--hover);
 }
 
@@ -181,7 +199,7 @@ html{
 }
 
 /* =========================
-   FOOTER HOME (REGULAR + CLEAN)
+   FOOTER HOME
 ========================= */
 
 .footer{
@@ -201,20 +219,6 @@ html{
   font-weight:700;
   font-size:1rem;
   color:var(--pink);
-}
-
-/* 🔥 MOBILE / EMAIL / LINKEDIN = SAME AS PROGETTI */
-.value{
-  font-family:"New Spirit";
-  font-weight:400;
-  font-size:1rem;
-  color:var(--pink);
-  text-decoration:none;
-  transition:color .2s ease;
-}
-
-.value:hover{
-  color:var(--hover);
 }
 
 /* =========================
