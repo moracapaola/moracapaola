@@ -47,7 +47,7 @@ body{
 }
 
 /* =========================
-   GLOBAL TYPO FIX (ONLY TRUE BOLD ELEMENTS)
+   GLOBAL BOLD ELEMENTS
 ========================= */
 
 .work-title,
@@ -146,8 +146,13 @@ html{
   display:flex;
 }
 
-/* 🔥 PROGETTI = LIGHT WEIGHT */
-.project{
+/* =========================
+   UNIFIED TYPE SYSTEM
+   (PROGETTI + CONTATTI)
+========================= */
+
+.project,
+.value{
   font-family:"New Spirit";
   font-weight:400;
   font-size:1rem;
@@ -156,7 +161,8 @@ html{
   transition:color .2s ease;
 }
 
-.project:hover{
+.project:hover,
+.value:hover{
   color:var(--hover);
 }
 
@@ -205,25 +211,10 @@ html{
   gap:10px;
 }
 
-/* 🔥 LABELS BOLD */
 .label{
   font-size:1rem;
   color:var(--pink);
   font-weight:700;
-  font-family:"New Spirit Bold";
-}
-
-/* 🔥 VALUES LIGHT */
-.value{
-  font-family:"New Spirit";
-  font-weight:400;
-  color:var(--pink);
-  text-decoration:none;
-  transition:color .2s ease;
-}
-
-.value:hover{
-  color:var(--hover);
 }
 
 /* =========================
@@ -255,7 +246,7 @@ html{
   min-height:60px;
 }
 
-/* LINKS (BOLD NAV OK) */
+/* NAV LINKS */
 .project-nav-top a,
 .project-nav-bottom a{
   font-size:18px;
@@ -281,7 +272,7 @@ html{
 }
 
 /* =========================
-   ABOUT PAGE FIX
+   ABOUT FIX
 ========================= */
 
 .single-page{
